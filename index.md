@@ -21,10 +21,10 @@ All the MINLP instances benchmarked here are from [MINLPLib](http://minlplib.org
 
 ## Paver Reports
 
-1. [C-OA for convex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/convex/multitree)
+1. [C-OA method for convex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/convex/multitree)
 
-2. [C-LP/NLP for convex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/convex/singletree)
+2. [C-LP/NLP-based B&B method for convex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/convex/singletree)
 
-3. [C-GOA for nonconvex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/nonconvex/multitree)
+3. [C-GOA method for nonconvex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/nonconvex/multitree)
 
-4. [C-GLP/NLP for nonconvex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/nonconvex/singletree)
+4. [C-GLP/NLP-based B&B method for nonconvex instances](https://SECQUOIA.github.io/Convexification-based-OA-Benchmark/paver_results/nonconvex/singletree)
