@@ -1,0 +1,183 @@
+Single-tree implementation is activated.
+Starting MindtPy version 1.0.0 using OA algorithm
+iteration_limit: 1
+stalling_limit: 5000
+time_limit: 900
+strategy: OA
+add_regularization: None
+call_after_main_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc67d0>
+call_before_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc6650>
+call_after_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc70d0>
+call_after_subproblem_feasible: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc7670>
+tee: true
+logger: <Logger pyomo.contrib.mindtpy (INFO)>
+logging_level: 20
+integer_to_binary: false
+add_no_good_cuts: false
+use_tabu_list: false
+single_tree: true
+solution_pool: false
+num_solution_iteration: 5
+cycling_check: true
+feasibility_norm: L_infinity
+differentiate_mode: reverse_symbolic
+use_mcpp: false
+calculate_dual_at_solution: false
+use_fbbt: false
+use_dual_bound: true
+partition_obj_nonlinear_terms: true
+quadratic_strategy: 0
+move_objective: false
+add_cuts_at_incumbent: false
+load_solutions: true
+use_baron_convexification: true
+heuristic_nonconvex: false
+init_strategy: rNLP
+level_coef: 0.5
+solution_limit: 10
+sqp_lag_scaling_coef: fixed
+fp_cutoffdecr: 0.1
+fp_iteration_limit: 20
+fp_projcuts: true
+fp_transfercuts: true
+fp_projzerotol: 0.0001
+fp_mipgap: 0.01
+fp_discrete_only: true
+fp_main_norm: L1
+fp_norm_constraint: true
+fp_norm_constraint_coef: 1.0
+add_slack: false
+max_slack: 1000.0
+OA_penalty_factor: 1000.0
+equality_relaxation: false
+linearize_inactive: false
+nlp_solver: gams
+nlp_solver_args:
+  solver: ipopth
+mip_solver: gurobi_persistent
+mip_solver_args:
+mip_solver_mipgap: 0.0001
+threads: 1
+regularization_mip_threads: 0
+solver_tee: false
+mip_solver_tee: false
+nlp_solver_tee: false
+mip_regularization_solver: None
+warm_start_fixed_nlp: true
+absolute_bound_tolerance: 0.0001
+relative_bound_tolerance: 0.001
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+zero_tolerance: 1e-08
+obj_bound: 1000000000000000.0
+continuous_var_bound: 10000000000.0
+integer_var_bound: 1000000000.0
+initial_bound_coef: 0.1
+
+-----------------------------------------------------------------------------------------------
+               Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo (MindtPy)                
+-----------------------------------------------------------------------------------------------
+For more information, please visit 
+https://pyomo.readthedocs.io/en/stable/contributed_packages/mindtpy.html
+If you use this software, please cite the following:
+Bernal, David E., et al. Mixed-integer nonlinear decomposition toolbox for Pyomo (MindtPy).
+Computer Aided Chemical Engineering. Vol. 44. Elsevier, 2018. 895-900.
+
+Original model has 258 constraints (48 nonlinear) and 0 disjunctions, with 176 variables, of which 36 are binary, 0 are integer, and 140 are continuous.
+rNLP is the initial strategy being used.
+
+ ===============================================================================================
+ Iteration | Subproblem Type | Objective Value | Primal Bound |   Dual Bound |   Gap   | Time(s)
+
+lp file generation time 0.11704754829406738
+time to add the cuts to pyomo model 0.19496417045593262
+Use the baron to tighten the bounds of variables and add initial cuts
+relaxed NLP is not solved to optimality.
+         -       Relaxed NLP                 0            inf           -inf      inf%      0.74
+         1           restrLP              9200            inf              0      nan%      0.79
+         1         Fixed NLP        Infeasible            inf              0      nan%      1.11
+         1   Feasibility NLP            194.25            inf              0      nan%      1.25
+         1           restrLP              7890            inf              0      nan%      1.28
+         2         Fixed NLP        Infeasible            inf              0      nan%      2.11
+         2   Feasibility NLP                36            inf              0      nan%      2.22
+         1           restrLP              9200            inf              0      nan%      2.25
+         3         Fixed NLP        Infeasible            inf              0      nan%      2.51
+         3   Feasibility NLP               162            inf              0      nan%      2.64
+         1           restrLP              7575            inf              0      nan%      2.67
+         4         Fixed NLP        Infeasible            inf              0      nan%      3.12
+         4   Feasibility NLP                25            inf              0      nan%      3.24
+         1           restrLP           34957.8            inf              0      nan%      3.27
+         5         Fixed NLP        Infeasible            inf              0      nan%      3.68
+         5   Feasibility NLP                 9            inf              0      nan%      3.79
+         1           restrLP             53021            inf              0      nan%      3.82
+         6         Fixed NLP        Infeasible            inf              0      nan%      4.11
+         6   Feasibility NLP             26.25            inf              0      nan%      4.24
+         1           restrLP           76335.5            inf              0      nan%      4.27
+         7         Fixed NLP        Infeasible            inf              0      nan%      4.52
+         7   Feasibility NLP              71.5            inf              0      nan%      4.69
+         1           restrLP           51432.6            inf              0      nan%      4.72
+         8         Fixed NLP        Infeasible            inf              0      nan%      5.65
+         8   Feasibility NLP           11.4846            inf              0      nan%      5.80
+         1           restrLP           30334.6            inf              0      nan%      5.83
+         9         Fixed NLP        Infeasible            inf              0      nan%      6.05
+         9   Feasibility NLP               2.5            inf              0      nan%      6.18
+         1           restrLP           55910.6            inf              0      nan%      6.21
+        10         Fixed NLP        Infeasible            inf              0      nan%      6.60
+        10   Feasibility NLP              53.5            inf              0      nan%      6.72
+         1           restrLP           79329.4            inf              0      nan%      6.74
+        11         Fixed NLP        Infeasible            inf              0      nan%      7.00
+        11   Feasibility NLP               7.5            inf              0      nan%      7.12
+         1           restrLP              6945            inf              0      nan%      7.16
+        12         Fixed NLP        Infeasible            inf              0      nan%      7.88
+        12   Feasibility NLP           5.57141            inf              0      nan%      8.00
+         1           restrLP           24031.3            inf           2160      nan%      8.05
+*       13         Fixed NLP           40929.6        40929.6           2160    94.72%      8.22
+         1           restrLP           40184.6        40929.6           2160    94.72%      8.23
+        14         Fixed NLP           41514.2        40929.6           2160    94.72%      8.38
+         1           restrLP           62379.8        40929.6           3025    92.61%      8.40
+        15         Fixed NLP           65886.5        40929.6           3025    92.61%      8.54
+         1           restrLP           65403.9        40929.6           3025    92.61%      8.55
+        16         Fixed NLP           65930.6        40929.6           3025    92.61%      8.70
+         1           restrLP           65930.6        40929.6           3025    92.61%      8.71
+        17         Fixed NLP           65930.6        40929.6           3025    92.61%      8.86
+         1           restrLP           29325.9        40929.6           3025    92.61%      8.87
+        18         Fixed NLP        Infeasible        40929.6           3025    92.61%      9.37
+        18   Feasibility NLP           7.38022        40929.6           3025    92.61%      9.50
+         1           restrLP           37119.6        40929.6           3025    92.61%      9.53
+        19         Fixed NLP        Infeasible        40929.6           3025    92.61%      9.94
+        19   Feasibility NLP          0.390624        40929.6           3025    92.61%     10.07
+         1           restrLP           37154.8        40929.6           3025    92.61%     10.09
+        20         Fixed NLP        Infeasible        40929.6           3025    92.61%     10.60
+        20   Feasibility NLP          0.390624        40929.6           3025    92.61%     10.75
+         1           restrLP           40929.6        40929.6           3025    92.61%     10.78
+        21         Fixed NLP           40929.6        40929.6           3025    92.61%     10.94
+         1           restrLP           40430.3        40929.6           3025    92.61%     10.94
+*       22         Fixed NLP           40576.2        40576.2           3025    92.54%     11.11
+         1           restrLP           39442.2        40576.2           3025    92.54%     11.12
+*       23         Fixed NLP           40262.4        40262.4           3025    92.49%     11.31
+         1           restrLP           6645.26        40262.4           3025    92.49%     11.32
+        24         Fixed NLP        Infeasible        40262.4           3025    92.49%     11.85
+        24   Feasibility NLP           3.57438        40262.4           3025    92.49%     11.99
+         1           restrLP           40335.1        40262.4           3025    92.49%     12.01
+        25         Fixed NLP             40791        40262.4           3025    92.49%     12.17
+         1           restrLP           37987.2        40262.4           3300    91.80%     12.19
+        26         Fixed NLP        Infeasible        40262.4           3300    91.80%     12.94
+        26   Feasibility NLP           1.32485        40262.4           3300    91.80%     13.06
+         1           restrLP             40752        40262.4        3454.82    91.42%     13.11
+        27         Fixed NLP        Infeasible        40262.4        3454.82    91.42%     13.40
+        27   Feasibility NLP              4.29        40262.4        3454.82    91.42%     13.59
+         1           restrLP           32436.8        40262.4           3535    91.22%     13.63
+        28         Fixed NLP        Infeasible        40262.4           3535    91.22%     14.14
+        28   Feasibility NLP                33        40262.4           3535    91.22%     14.27
+         1           restrLP             40822        40262.4        4940.64    87.73%     14.34
+        29         Fixed NLP           40964.4        40262.4        4940.64    87.73%     14.50
+         1           restrLP           40262.4        40262.4        22943.7    43.01%     14.52
+        30         Fixed NLP           40262.4        40262.4        22943.7    43.01%     14.68
+MindtPy exiting on bound convergence. Absolute gap: -5.8384241128806025e-05 <= absolute tolerance: 0.0001 
+
+ ===============================================================================================
+ Primal integral          :   7330.2065 
+ Dual integral            :   557551.9743 
+ Primal-dual gap integral :   564882.1808 

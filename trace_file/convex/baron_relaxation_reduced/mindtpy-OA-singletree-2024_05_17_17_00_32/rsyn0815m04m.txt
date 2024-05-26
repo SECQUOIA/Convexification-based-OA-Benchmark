@@ -1,0 +1,138 @@
+Single-tree implementation is activated.
+Starting MindtPy version 1.0.0 using OA algorithm
+iteration_limit: 1
+stalling_limit: 5000
+time_limit: 900
+strategy: OA
+add_regularization: None
+call_after_main_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc67d0>
+call_before_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc6650>
+call_after_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc70d0>
+call_after_subproblem_feasible: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc7670>
+tee: true
+logger: <Logger pyomo.contrib.mindtpy (INFO)>
+logging_level: 20
+integer_to_binary: false
+add_no_good_cuts: false
+use_tabu_list: false
+single_tree: true
+solution_pool: false
+num_solution_iteration: 5
+cycling_check: true
+feasibility_norm: L_infinity
+differentiate_mode: reverse_symbolic
+use_mcpp: false
+calculate_dual_at_solution: false
+use_fbbt: false
+use_dual_bound: true
+partition_obj_nonlinear_terms: true
+quadratic_strategy: 0
+move_objective: false
+add_cuts_at_incumbent: false
+load_solutions: true
+use_baron_convexification: true
+heuristic_nonconvex: false
+init_strategy: rNLP
+level_coef: 0.5
+solution_limit: 10
+sqp_lag_scaling_coef: fixed
+fp_cutoffdecr: 0.1
+fp_iteration_limit: 20
+fp_projcuts: true
+fp_transfercuts: true
+fp_projzerotol: 0.0001
+fp_mipgap: 0.01
+fp_discrete_only: true
+fp_main_norm: L1
+fp_norm_constraint: true
+fp_norm_constraint_coef: 1.0
+add_slack: false
+max_slack: 1000.0
+OA_penalty_factor: 1000.0
+equality_relaxation: false
+linearize_inactive: false
+nlp_solver: gams
+nlp_solver_args:
+  solver: ipopth
+mip_solver: gurobi_persistent
+mip_solver_args:
+mip_solver_mipgap: 0.0001
+threads: 1
+regularization_mip_threads: 0
+solver_tee: false
+mip_solver_tee: false
+nlp_solver_tee: false
+mip_regularization_solver: None
+warm_start_fixed_nlp: true
+absolute_bound_tolerance: 0.0001
+relative_bound_tolerance: 0.001
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+zero_tolerance: 1e-08
+obj_bound: 1000000000000000.0
+continuous_var_bound: 10000000000.0
+integer_var_bound: 1000000000.0
+initial_bound_coef: 0.1
+
+-----------------------------------------------------------------------------------------------
+               Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo (MindtPy)                
+-----------------------------------------------------------------------------------------------
+For more information, please visit 
+https://pyomo.readthedocs.io/en/stable/contributed_packages/mindtpy.html
+If you use this software, please cite the following:
+Bernal, David E., et al. Mixed-integer nonlinear decomposition toolbox for Pyomo (MindtPy).
+Computer Aided Chemical Engineering. Vol. 44. Elsevier, 2018. 895-900.
+
+Original model has 2430 constraints (44 nonlinear) and 0 disjunctions, with 940 variables, of which 376 are binary, 0 are integer, and 564 are continuous.
+rNLP is the initial strategy being used.
+
+ ===============================================================================================
+ Iteration | Subproblem Type | Objective Value | Primal Bound |   Dual Bound |   Gap   | Time(s)
+
+lp file generation time 0.3603954315185547
+time to add the cuts to pyomo model 0.3200242519378662
+Use the baron to tighten the bounds of variables and add initial cuts
+relaxed NLP is not solved to optimality.
+         -       Relaxed NLP             11245           -inf            inf      inf%      1.81
+         1           restrLP           2420.35           -inf        25347.7      nan%      2.04
+*        1         Fixed NLP            1936.9         1936.9        25347.7   1208.68%      2.45
+         1           restrLP           3151.45         1936.9        5303.31   173.80%      2.51
+*        2         Fixed NLP           2788.82        2788.82        5303.31    90.16%      2.90
+         1           restrLP           2788.82        2788.82        5303.31    90.16%      2.93
+         1           restrLP           2833.78        2788.82        4455.33    59.76%      2.97
+         3         Fixed NLP           2763.81        2788.82        4455.33    59.76%      3.18
+         1           restrLP           2912.83        2788.82        4455.33    59.76%      3.20
+*        4         Fixed NLP           2912.83        2912.83        4455.33    52.96%      3.61
+         1           restrLP           3350.98        2912.83         4090.2    40.42%      3.69
+*        5         Fixed NLP           3350.98        3350.98         4090.2    22.06%      4.06
+         1           restrLP            3390.2        3350.98        3700.51    10.43%      4.20
+*        6         Fixed NLP            3390.2         3390.2        3700.51     9.15%      4.58
+         1           restrLP            3390.2         3390.2        3672.73     8.33%      4.68
+         7         Fixed NLP            3390.2         3390.2        3672.73     8.33%      4.89
+         1           restrLP           3394.94         3390.2        3599.94     6.19%      4.96
+*        8         Fixed NLP           3393.74        3393.74        3599.94     6.08%      5.34
+         1           restrLP           3402.97        3393.74        3470.41     2.26%      5.45
+*        9         Fixed NLP           3408.85        3408.85        3470.41     1.81%      5.83
+         1           restrLP           3412.55        3408.85        3459.32     1.48%      5.85
+*       10         Fixed NLP           3410.85        3410.85        3459.32     1.42%      6.29
+         1           restrLP            3390.8        3410.85        3459.32     1.42%      6.31
+        11         Fixed NLP            3390.8        3410.85        3459.32     1.42%      6.52
+         1           restrLP           3395.85        3410.85        3459.32     1.42%      6.54
+        12         Fixed NLP           3395.85        3410.85        3459.32     1.42%      6.76
+         1           restrLP            3405.8        3410.85        3459.32     1.42%      6.77
+        13         Fixed NLP            3405.8        3410.85        3459.32     1.42%      6.99
+         1           restrLP           3408.85        3410.85        3423.17     0.36%      7.02
+        14         Fixed NLP           3408.85        3410.85        3423.17     0.36%      7.23
+         1           restrLP           3410.85        3410.85        3412.55     0.05%      7.25
+MindtPy exiting on bound convergence. Relative gap : 0.0004983049883000221 <= relative tolerance: 0.001 
+
+WARNING: Loading a SolverResults object with an 'aborted' status, but
+containing a solution
+MindtPy exiting on bound convergence. Relative gap : 0.0004983049883000221 <= relative tolerance: 0.001 
+
+ ===============================================================================================
+ Primal integral          :   4037.6995 
+ Dual integral            :   47480.9082 
+ Primal-dual gap integral :   51518.6077 

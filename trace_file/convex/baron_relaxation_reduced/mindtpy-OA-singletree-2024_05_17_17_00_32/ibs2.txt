@@ -1,0 +1,157 @@
+Single-tree implementation is activated.
+Starting MindtPy version 1.0.0 using OA algorithm
+iteration_limit: 1
+stalling_limit: 5000
+time_limit: 900
+strategy: OA
+add_regularization: None
+call_after_main_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc67d0>
+call_before_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc6650>
+call_after_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc70d0>
+call_after_subproblem_feasible: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc7670>
+tee: true
+logger: <Logger pyomo.contrib.mindtpy (INFO)>
+logging_level: 20
+integer_to_binary: false
+add_no_good_cuts: false
+use_tabu_list: false
+single_tree: true
+solution_pool: false
+num_solution_iteration: 5
+cycling_check: true
+feasibility_norm: L_infinity
+differentiate_mode: reverse_symbolic
+use_mcpp: false
+calculate_dual_at_solution: false
+use_fbbt: false
+use_dual_bound: true
+partition_obj_nonlinear_terms: true
+quadratic_strategy: 0
+move_objective: false
+add_cuts_at_incumbent: false
+load_solutions: true
+use_baron_convexification: true
+heuristic_nonconvex: false
+init_strategy: rNLP
+level_coef: 0.5
+solution_limit: 10
+sqp_lag_scaling_coef: fixed
+fp_cutoffdecr: 0.1
+fp_iteration_limit: 20
+fp_projcuts: true
+fp_transfercuts: true
+fp_projzerotol: 0.0001
+fp_mipgap: 0.01
+fp_discrete_only: true
+fp_main_norm: L1
+fp_norm_constraint: true
+fp_norm_constraint_coef: 1.0
+add_slack: false
+max_slack: 1000.0
+OA_penalty_factor: 1000.0
+equality_relaxation: false
+linearize_inactive: false
+nlp_solver: gams
+nlp_solver_args:
+  solver: ipopth
+mip_solver: gurobi_persistent
+mip_solver_args:
+mip_solver_mipgap: 0.0001
+threads: 1
+regularization_mip_threads: 0
+solver_tee: false
+mip_solver_tee: false
+nlp_solver_tee: false
+mip_regularization_solver: None
+warm_start_fixed_nlp: true
+absolute_bound_tolerance: 0.0001
+relative_bound_tolerance: 0.001
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+zero_tolerance: 1e-08
+obj_bound: 1000000000000000.0
+continuous_var_bound: 10000000000.0
+integer_var_bound: 1000000000.0
+initial_bound_coef: 0.1
+
+-----------------------------------------------------------------------------------------------
+               Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo (MindtPy)                
+-----------------------------------------------------------------------------------------------
+For more information, please visit 
+https://pyomo.readthedocs.io/en/stable/contributed_packages/mindtpy.html
+If you use this software, please cite the following:
+Bernal, David E., et al. Mixed-integer nonlinear decomposition toolbox for Pyomo (MindtPy).
+Computer Aided Chemical Engineering. Vol. 44. Elsevier, 2018. 895-900.
+
+Original model has 1821 constraints (10 nonlinear) and 0 disjunctions, with 3010 variables, of which 1500 are binary, 0 are integer, and 1510 are continuous.
+rNLP is the initial strategy being used.
+
+ ===============================================================================================
+ Iteration | Subproblem Type | Objective Value | Primal Bound |   Dual Bound |   Gap   | Time(s)
+
+lp file generation time 0.5706312656402588
+time to add the cuts to pyomo model 1.5749289989471436
+Use the baron to tighten the bounds of variables and add initial cuts
+relaxed NLP is not solved to optimality.
+         -       Relaxed NLP             4.443            inf           -inf      inf%      4.87
+         1           restrLP           6.22641            inf    2.17259e-14      nan%      5.84
+Trivial constraint c17 violates LB 7.5257498916 ≤ BODY 2.7485524401871086.
+Traceback (most recent call last):
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/contrib/mindtpy/algorithm_base_class.py", line 1099, in solve_subproblem
+    TransformationFactory('contrib.deactivate_trivial_constraints').apply_to(
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/core/base/transformation.py", line 77, in apply_to
+    reverse_token = self._apply_to(model, **kwds)
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/contrib/preprocessing/plugins/deactivate_trivial_constraints.py", line 118, in _apply_to
+    raise InfeasibleConstraintException(
+pyomo.common.errors.InfeasibleConstraintException: Trivial constraint c17 violates LB 7.5257498916 ≤ BODY 2.7485524401871086.
+Infeasibility detected in deactivate_trivial_constraints.
+         1         Fixed NLP        Infeasible            inf    2.17259e-14      nan%      5.87
+WARNING: Deactivating trivial constraints on the block unknown for which
+trivial constraints were previously deactivated. Reversion will affect all
+deactivated constraints.
+         1   Feasibility NLP           4.95341            inf    2.17259e-14      nan%      6.32
+         1           restrLP           4.44299            inf        4.44299      nan%      6.53
+Trivial constraint c16 violates LB 7.5257498916 ≤ BODY 3.0477263211476933.
+Traceback (most recent call last):
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/contrib/mindtpy/algorithm_base_class.py", line 1099, in solve_subproblem
+    TransformationFactory('contrib.deactivate_trivial_constraints').apply_to(
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/core/base/transformation.py", line 77, in apply_to
+    reverse_token = self._apply_to(model, **kwds)
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/contrib/preprocessing/plugins/deactivate_trivial_constraints.py", line 118, in _apply_to
+    raise InfeasibleConstraintException(
+pyomo.common.errors.InfeasibleConstraintException: Trivial constraint c16 violates LB 7.5257498916 ≤ BODY 3.0477263211476933.
+Infeasibility detected in deactivate_trivial_constraints.
+         2         Fixed NLP        Infeasible            inf        4.44299      nan%      6.55
+WARNING: Deactivating trivial constraints on the block unknown for which
+trivial constraints were previously deactivated. Reversion will affect all
+deactivated constraints.
+         2   Feasibility NLP           4.61977            inf        4.44299      nan%      6.92
+         1           restrLP           4.44299            inf        4.44299      nan%      7.14
+Trivial constraint c16 violates LB 7.5257498916 ≤ BODY 6.051063810633899.
+Traceback (most recent call last):
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/contrib/mindtpy/algorithm_base_class.py", line 1099, in solve_subproblem
+    TransformationFactory('contrib.deactivate_trivial_constraints').apply_to(
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/core/base/transformation.py", line 77, in apply_to
+    reverse_token = self._apply_to(model, **kwds)
+  File "/local/scratch/a/peng372/temp_env/pyomo/pyomo/contrib/preprocessing/plugins/deactivate_trivial_constraints.py", line 118, in _apply_to
+    raise InfeasibleConstraintException(
+pyomo.common.errors.InfeasibleConstraintException: Trivial constraint c16 violates LB 7.5257498916 ≤ BODY 6.051063810633899.
+Infeasibility detected in deactivate_trivial_constraints.
+         3         Fixed NLP        Infeasible            inf        4.44299      nan%      7.17
+WARNING: Deactivating trivial constraints on the block unknown for which
+trivial constraints were previously deactivated. Reversion will affect all
+deactivated constraints.
+         3   Feasibility NLP            2.2879            inf        4.44299      nan%      7.54
+         1           restrLP           4.83734            inf        4.44299      nan%      7.74
+         4         Fixed NLP        Infeasible            inf        4.44299      nan%     18.75
+         4   Feasibility NLP           1.25106            inf        4.44299      nan%     19.14
+         1           restrLP           4.44299            inf        4.44299      nan%     19.37
+*        5         Fixed NLP             44.99          44.99        4.44299    90.12%    901.15
+MindtPy unable to converge bounds after 1 main iterations.
+Final bound values: Primal Bound: 44.99001070968105  Dual Bound: 4.442990946708704
+ ===============================================================================================
+ Primal integral          :    0.0000 
+ Dual integral            :   25.9486 
+ Primal-dual gap integral :   25.9486 

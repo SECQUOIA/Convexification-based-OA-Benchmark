@@ -1,0 +1,198 @@
+Single-tree implementation is activated.
+Starting MindtPy version 1.0.0 using OA algorithm
+iteration_limit: 1
+stalling_limit: 5000
+time_limit: 900
+strategy: OA
+add_regularization: None
+call_after_main_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc67d0>
+call_before_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc6650>
+call_after_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc70d0>
+call_after_subproblem_feasible: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc7670>
+tee: true
+logger: <Logger pyomo.contrib.mindtpy (INFO)>
+logging_level: 20
+integer_to_binary: false
+add_no_good_cuts: false
+use_tabu_list: false
+single_tree: true
+solution_pool: false
+num_solution_iteration: 5
+cycling_check: true
+feasibility_norm: L_infinity
+differentiate_mode: reverse_symbolic
+use_mcpp: false
+calculate_dual_at_solution: false
+use_fbbt: false
+use_dual_bound: true
+partition_obj_nonlinear_terms: true
+quadratic_strategy: 0
+move_objective: false
+add_cuts_at_incumbent: false
+load_solutions: true
+use_baron_convexification: true
+heuristic_nonconvex: false
+init_strategy: rNLP
+level_coef: 0.5
+solution_limit: 10
+sqp_lag_scaling_coef: fixed
+fp_cutoffdecr: 0.1
+fp_iteration_limit: 20
+fp_projcuts: true
+fp_transfercuts: true
+fp_projzerotol: 0.0001
+fp_mipgap: 0.01
+fp_discrete_only: true
+fp_main_norm: L1
+fp_norm_constraint: true
+fp_norm_constraint_coef: 1.0
+add_slack: false
+max_slack: 1000.0
+OA_penalty_factor: 1000.0
+equality_relaxation: false
+linearize_inactive: false
+nlp_solver: gams
+nlp_solver_args:
+  solver: ipopth
+mip_solver: gurobi_persistent
+mip_solver_args:
+mip_solver_mipgap: 0.0001
+threads: 1
+regularization_mip_threads: 0
+solver_tee: false
+mip_solver_tee: false
+nlp_solver_tee: false
+mip_regularization_solver: None
+warm_start_fixed_nlp: true
+absolute_bound_tolerance: 0.0001
+relative_bound_tolerance: 0.001
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+zero_tolerance: 1e-08
+obj_bound: 1000000000000000.0
+continuous_var_bound: 10000000000.0
+integer_var_bound: 1000000000.0
+initial_bound_coef: 0.1
+
+-----------------------------------------------------------------------------------------------
+               Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo (MindtPy)                
+-----------------------------------------------------------------------------------------------
+For more information, please visit 
+https://pyomo.readthedocs.io/en/stable/contributed_packages/mindtpy.html
+If you use this software, please cite the following:
+Bernal, David E., et al. Mixed-integer nonlinear decomposition toolbox for Pyomo (MindtPy).
+Computer Aided Chemical Engineering. Vol. 44. Elsevier, 2018. 895-900.
+
+Original model has 4 constraints (1 nonlinear) and 0 disjunctions, with 31 variables, of which 0 are binary, 30 are integer, and 1 are continuous.
+rNLP is the initial strategy being used.
+
+ ===============================================================================================
+ Iteration | Subproblem Type | Objective Value | Primal Bound |   Dual Bound |   Gap   | Time(s)
+
+lp file generation time 0.35919976234436035
+time to add the cuts to pyomo model 0.05243539810180664
+Use the baron to tighten the bounds of variables and add initial cuts
+relaxed NLP is not solved to optimality.
+         -       Relaxed NLP          0.391476            inf           -inf      inf%      0.85
+         1           restrLP           1.78281            inf        -1e+100      nan%      0.91
+*        1         Fixed NLP           1.43336        1.43336        -1e+100   697661774718062336252534524050758221643448584034332680863863675841104292636249992414296474469898649600.00%      1.04
+         1           restrLP           1.69004        1.43336       0.391476    72.69%      1.05
+         2         Fixed NLP           1.69474        1.43336       0.391476    72.69%      1.15
+         1           restrLP           3.75239        1.43336       0.391476    72.69%      1.15
+         3         Fixed NLP           3.77472        1.43336       0.391476    72.69%      1.25
+         1           restrLP          0.398155        1.43336       0.391476    72.69%      1.25
+*        4         Fixed NLP          0.400404       0.400404       0.391476     2.23%      1.38
+         1           restrLP          0.400404       0.400404       0.391476     2.23%      1.38
+         1           restrLP          0.393551       0.400404       0.391476     2.23%      1.43
+         5         Fixed NLP           0.92236       0.400404       0.391476     2.23%      1.53
+         1           restrLP          0.394999       0.400404       0.391476     2.23%      1.53
+         6         Fixed NLP          0.594151       0.400404       0.391476     2.23%      1.63
+         1           restrLP          0.396651       0.400404       0.391476     2.23%      1.63
+         7         Fixed NLP           0.53011       0.400404       0.391476     2.23%      1.73
+         1           restrLP          0.399357       0.400404       0.391476     2.23%      1.73
+         8         Fixed NLP          0.505797       0.400404       0.391476     2.23%      1.83
+         1           restrLP          0.398037       0.400404       0.391476     2.23%      1.83
+         9         Fixed NLP          0.612057       0.400404       0.391476     2.23%      1.94
+         1           restrLP          0.396581       0.400404       0.391476     2.23%      1.94
+        10         Fixed NLP           0.51488       0.400404       0.391476     2.23%      2.06
+         1           restrLP          0.393564       0.400404       0.391476     2.23%      2.06
+        11         Fixed NLP          0.478156       0.400404       0.391476     2.23%      2.16
+         1           restrLP          0.398945       0.400404       0.391476     2.23%      2.16
+        12         Fixed NLP          0.446413       0.400404       0.391476     2.23%      2.26
+         1           restrLP          0.396667       0.400404       0.391476     2.23%      2.28
+        13         Fixed NLP          0.486056       0.400404       0.391476     2.23%      2.37
+         1           restrLP          0.395563       0.400404       0.391476     2.23%      2.38
+        14         Fixed NLP          0.435822       0.400404       0.391476     2.23%      2.48
+         1           restrLP          0.400274       0.400404       0.391476     2.23%      2.48
+        15         Fixed NLP          0.421467       0.400404       0.391476     2.23%      2.58
+         1           restrLP          0.397137       0.400404       0.391476     2.23%      2.59
+        16         Fixed NLP          0.416593       0.400404       0.391476     2.23%      2.68
+         1           restrLP          0.395039       0.400404       0.391476     2.23%      2.69
+        17         Fixed NLP          0.416217       0.400404       0.391476     2.23%      2.79
+         1           restrLP          0.397873       0.400404       0.391476     2.23%      2.79
+        18         Fixed NLP          0.409188       0.400404       0.391476     2.23%      2.89
+         1           restrLP          0.394577       0.400404       0.391476     2.23%      2.89
+        19         Fixed NLP          0.432155       0.400404       0.391476     2.23%      2.99
+         1           restrLP          0.399085       0.400404       0.391476     2.23%      2.99
+        20         Fixed NLP           0.42783       0.400404       0.391476     2.23%      3.08
+         1           restrLP          0.398229       0.400404       0.391476     2.23%      3.09
+        21         Fixed NLP          0.403145       0.400404       0.391476     2.23%      3.19
+         1           restrLP          0.398708       0.400404       0.391476     2.23%      3.20
+        22         Fixed NLP          0.426565       0.400404       0.391476     2.23%      3.30
+         1           restrLP          0.395971       0.400404       0.391476     2.23%      3.30
+        23         Fixed NLP          0.404374       0.400404       0.391476     2.23%      3.41
+         1           restrLP          0.399348       0.400404       0.391476     2.23%      3.41
+        24         Fixed NLP          0.448675       0.400404       0.391476     2.23%      3.51
+         1           restrLP          0.400092       0.400404       0.391476     2.23%      3.52
+        25         Fixed NLP          0.451122       0.400404       0.391476     2.23%      3.61
+         1           restrLP          0.399595       0.400404       0.391476     2.23%      3.63
+        26         Fixed NLP          0.408445       0.400404       0.391476     2.23%      3.74
+         1           restrLP           0.39579       0.400404       0.391476     2.23%      3.75
+        27         Fixed NLP           0.42613       0.400404       0.391476     2.23%      3.85
+         1           restrLP          0.396204       0.400404       0.391476     2.23%      3.85
+        28         Fixed NLP          0.434888       0.400404       0.391476     2.23%      3.95
+         1           restrLP          0.393723       0.400404       0.391476     2.23%      3.96
+*       29         Fixed NLP          0.398797       0.398797       0.391476     1.84%      4.09
+         1           restrLP          0.399412       0.398797       0.391476     1.84%      4.10
+        30         Fixed NLP          0.416752       0.398797       0.391476     1.84%      4.20
+         1           restrLP          0.398819       0.398797       0.391476     1.84%      4.21
+        31         Fixed NLP          0.418242       0.398797       0.391476     1.84%      4.32
+         1           restrLP          0.398679       0.398797       0.391476     1.84%      4.32
+        32         Fixed NLP          0.405471       0.398797       0.391476     1.84%      4.41
+         1           restrLP          0.398908       0.398797       0.391476     1.84%      4.42
+        33         Fixed NLP          0.438174       0.398797       0.391476     1.84%      4.52
+         1           restrLP          0.398844       0.398797       0.391476     1.84%      4.52
+        34         Fixed NLP          0.410007       0.398797       0.391476     1.84%      4.61
+         1           restrLP          0.394989       0.398797       0.391476     1.84%      4.62
+        35         Fixed NLP          0.399905       0.398797       0.391476     1.84%      4.72
+         1           restrLP          0.398412       0.398797       0.391476     1.84%      4.73
+        36         Fixed NLP          0.418466       0.398797       0.391476     1.84%      4.85
+         1           restrLP          0.394886       0.398797       0.391476     1.84%      4.87
+        37         Fixed NLP          0.417303       0.398797       0.391476     1.84%      4.97
+         1           restrLP          0.399745       0.398797       0.391476     1.84%      4.98
+        38         Fixed NLP          0.429167       0.398797       0.391476     1.84%      5.08
+         1           restrLP          0.397292       0.398797       0.391476     1.84%      5.10
+        39         Fixed NLP          0.402208       0.398797       0.391476     1.84%      5.21
+         1           restrLP          0.399064       0.398797       0.391476     1.84%      5.21
+        40         Fixed NLP           0.40398       0.398797       0.391476     1.84%      5.31
+         1           restrLP          0.395983       0.398797       0.391476     1.84%      5.34
+        41         Fixed NLP          0.414394       0.398797       0.391476     1.84%      5.43
+         1           restrLP          0.399024       0.398797       0.392323     1.62%      5.44
+        42         Fixed NLP          0.422398       0.398797       0.392323     1.62%      5.53
+         1           restrLP          0.398797       0.398797       0.393223     1.40%      5.55
+         1           restrLP          0.398531       0.398797       0.393223     1.40%      5.55
+        43         Fixed NLP          0.403447       0.398797       0.393223     1.40%      5.64
+         1           restrLP          0.395843       0.398797       0.393618     1.30%      5.65
+        44         Fixed NLP           0.41054       0.398797       0.393618     1.30%      5.74
+         1           restrLP          0.396884       0.398797       0.393618     1.30%      5.75
+        45         Fixed NLP          0.403677       0.398797       0.393618     1.30%      5.84
+         1           restrLP          0.397905       0.398797       0.394249     1.14%      5.84
+        46         Fixed NLP          0.402821       0.398797       0.394249     1.14%      5.94
+MindtPy exiting on bound convergence. Absolute gap: 1.3552678843120614e-05 <= absolute tolerance: 0.0001 
+
+ ===============================================================================================
+ Primal integral          :    1.2840 
+ Dual integral            :   9139408039627597596709986756890568085229181923272173074106175455852781288973772568673043099540258816.0000 
+ Primal-dual gap integral :   9139408039627597596709986756890568085229181923272173074106175455852781288973772568673043099540258816.0000 

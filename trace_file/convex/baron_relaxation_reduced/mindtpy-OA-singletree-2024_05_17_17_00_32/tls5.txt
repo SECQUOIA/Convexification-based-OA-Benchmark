@@ -1,0 +1,894 @@
+Single-tree implementation is activated.
+Starting MindtPy version 1.0.0 using OA algorithm
+iteration_limit: 1
+stalling_limit: 5000
+time_limit: 900
+strategy: OA
+add_regularization: None
+call_after_main_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc67d0>
+call_before_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc6650>
+call_after_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc70d0>
+call_after_subproblem_feasible: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc7670>
+tee: true
+logger: <Logger pyomo.contrib.mindtpy (INFO)>
+logging_level: 20
+integer_to_binary: false
+add_no_good_cuts: false
+use_tabu_list: false
+single_tree: true
+solution_pool: false
+num_solution_iteration: 5
+cycling_check: true
+feasibility_norm: L_infinity
+differentiate_mode: reverse_symbolic
+use_mcpp: false
+calculate_dual_at_solution: false
+use_fbbt: false
+use_dual_bound: true
+partition_obj_nonlinear_terms: true
+quadratic_strategy: 0
+move_objective: false
+add_cuts_at_incumbent: false
+load_solutions: true
+use_baron_convexification: true
+heuristic_nonconvex: false
+init_strategy: rNLP
+level_coef: 0.5
+solution_limit: 10
+sqp_lag_scaling_coef: fixed
+fp_cutoffdecr: 0.1
+fp_iteration_limit: 20
+fp_projcuts: true
+fp_transfercuts: true
+fp_projzerotol: 0.0001
+fp_mipgap: 0.01
+fp_discrete_only: true
+fp_main_norm: L1
+fp_norm_constraint: true
+fp_norm_constraint_coef: 1.0
+add_slack: false
+max_slack: 1000.0
+OA_penalty_factor: 1000.0
+equality_relaxation: false
+linearize_inactive: false
+nlp_solver: gams
+nlp_solver_args:
+  solver: ipopth
+mip_solver: gurobi_persistent
+mip_solver_args:
+mip_solver_mipgap: 0.0001
+threads: 1
+regularization_mip_threads: 0
+solver_tee: false
+mip_solver_tee: false
+nlp_solver_tee: false
+mip_regularization_solver: None
+warm_start_fixed_nlp: true
+absolute_bound_tolerance: 0.0001
+relative_bound_tolerance: 0.001
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+zero_tolerance: 1e-08
+obj_bound: 1000000000000000.0
+continuous_var_bound: 10000000000.0
+integer_var_bound: 1000000000.0
+initial_bound_coef: 0.1
+
+-----------------------------------------------------------------------------------------------
+               Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo (MindtPy)                
+-----------------------------------------------------------------------------------------------
+For more information, please visit 
+https://pyomo.readthedocs.io/en/stable/contributed_packages/mindtpy.html
+If you use this software, please cite the following:
+Bernal, David E., et al. Mixed-integer nonlinear decomposition toolbox for Pyomo (MindtPy).
+Computer Aided Chemical Engineering. Vol. 44. Elsevier, 2018. 895-900.
+
+Original model has 90 constraints (5 nonlinear) and 0 disjunctions, with 161 variables, of which 131 are binary, 5 are integer, and 25 are continuous.
+rNLP is the initial strategy being used.
+
+ ===============================================================================================
+ Iteration | Subproblem Type | Objective Value | Primal Bound |   Dual Bound |   Gap   | Time(s)
+
+lp file generation time 0.42114782333374023
+time to add the cuts to pyomo model 0.041311025619506836
+Use the baron to tighten the bounds of variables and add initial cuts
+relaxed NLP is not solved to optimality.
+         -       Relaxed NLP           1.17887            inf           -inf      inf%      0.83
+         1           restrLP               7.3            inf            3.4      nan%      1.82
+         1         Fixed NLP        Infeasible            inf            3.4      nan%      1.91
+         1   Feasibility NLP                 5            inf            3.4      nan%      2.01
+         1           restrLP               9.1            inf            3.5      nan%      2.75
+         2         Fixed NLP        Infeasible            inf            3.5      nan%      2.84
+         2   Feasibility NLP                 7            inf            3.5      nan%      2.92
+         1           restrLP              11.9            inf            3.5      nan%      3.54
+         3         Fixed NLP        Infeasible            inf            3.5      nan%      3.63
+         3   Feasibility NLP                 4            inf            3.5      nan%      3.73
+         1           restrLP              11.9            inf            3.5      nan%      3.75
+         4         Fixed NLP        Infeasible            inf            3.5      nan%      3.84
+         4   Feasibility NLP                 3            inf            3.5      nan%      3.92
+         1           restrLP              10.5            inf            3.6      nan%      4.77
+         5         Fixed NLP        Infeasible            inf            3.6      nan%      4.86
+         5   Feasibility NLP                 4            inf            3.6      nan%      4.94
+         1           restrLP               7.4            inf            3.7      nan%      5.11
+         6         Fixed NLP        Infeasible            inf            3.7      nan%      5.21
+         6   Feasibility NLP                 6            inf            3.7      nan%      5.30
+         1           restrLP              11.1            inf            3.9      nan%      6.49
+         7         Fixed NLP        Infeasible            inf            3.9      nan%      6.58
+         7   Feasibility NLP                 2            inf            3.9      nan%      6.66
+         1           restrLP              11.1            inf            3.9      nan%      6.67
+         8         Fixed NLP        Infeasible            inf            3.9      nan%      6.75
+         8   Feasibility NLP                 1            inf            3.9      nan%      6.82
+         1           restrLP              11.1            inf            3.9      nan%      6.83
+         9         Fixed NLP        Infeasible            inf            3.9      nan%      6.92
+         9   Feasibility NLP                 1            inf            3.9      nan%      7.00
+         1           restrLP              10.5            inf            3.9      nan%      7.16
+        10         Fixed NLP        Infeasible            inf            3.9      nan%      7.24
+        10   Feasibility NLP                 2            inf            3.9      nan%      7.31
+         1           restrLP               9.4            inf              4      nan%      7.44
+        11         Fixed NLP        Infeasible            inf              4      nan%      7.52
+        11   Feasibility NLP                 6            inf              4      nan%      7.61
+         1           restrLP              10.4            inf              4      nan%      8.21
+        12         Fixed NLP        Infeasible            inf              4      nan%      8.31
+        12   Feasibility NLP                 3            inf              4      nan%      8.39
+         1           restrLP                15            inf            4.1      nan%      8.81
+        13         Fixed NLP        Infeasible            inf            4.1      nan%      8.89
+        13   Feasibility NLP                 2            inf            4.1      nan%      8.98
+         1           restrLP               8.4            inf            4.2      nan%      9.23
+        14         Fixed NLP        Infeasible            inf            4.2      nan%      9.31
+        14   Feasibility NLP                 4            inf            4.2      nan%      9.39
+         1           restrLP              10.9            inf            4.2      nan%      9.46
+        15         Fixed NLP        Infeasible            inf            4.2      nan%      9.54
+        15   Feasibility NLP                 8            inf            4.2      nan%      9.63
+         1           restrLP               9.7            inf            4.2      nan%      9.67
+        16         Fixed NLP        Infeasible            inf            4.2      nan%      9.76
+        16   Feasibility NLP                 3            inf            4.2      nan%      9.84
+         1           restrLP               7.3            inf            4.2      nan%     10.12
+        17         Fixed NLP        Infeasible            inf            4.2      nan%     10.21
+        17   Feasibility NLP                10            inf            4.2      nan%     10.29
+         1           restrLP              12.4            inf            4.2      nan%     10.35
+        18         Fixed NLP        Infeasible            inf            4.2      nan%     10.44
+        18   Feasibility NLP                 5            inf            4.2      nan%     10.52
+         1           restrLP              11.7            inf            4.2      nan%     10.60
+        19         Fixed NLP        Infeasible            inf            4.2      nan%     10.68
+        19   Feasibility NLP                 2            inf            4.2      nan%     10.76
+         1           restrLP                15            inf            4.2      nan%     10.86
+        20         Fixed NLP        Infeasible            inf            4.2      nan%     10.95
+        20   Feasibility NLP                 2            inf            4.2      nan%     11.04
+         1           restrLP               6.5            inf            4.2      nan%     11.29
+        21         Fixed NLP        Infeasible            inf            4.2      nan%     11.38
+        21   Feasibility NLP                 7            inf            4.2      nan%     11.46
+         1           restrLP                10            inf            4.2      nan%     11.48
+        22         Fixed NLP        Infeasible            inf            4.2      nan%     11.56
+        22   Feasibility NLP                 3            inf            4.2      nan%     11.64
+         1           restrLP               7.3            inf            4.2      nan%     11.67
+        23         Fixed NLP        Infeasible            inf            4.2      nan%     11.75
+        23   Feasibility NLP                 6            inf            4.2      nan%     11.83
+         1           restrLP               9.1            inf            4.2      nan%     11.86
+        24         Fixed NLP        Infeasible            inf            4.2      nan%     11.94
+        24   Feasibility NLP                 3            inf            4.2      nan%     12.02
+         1           restrLP              11.1            inf            4.2      nan%     12.03
+        25         Fixed NLP        Infeasible            inf            4.2      nan%     12.12
+        25   Feasibility NLP                 2            inf            4.2      nan%     12.19
+         1           restrLP              12.1            inf            4.2      nan%     12.20
+*       26         Fixed NLP              12.1           12.1            4.2    65.29%     12.31
+         1           restrLP              11.1           12.1            4.2    65.29%     12.33
+        27         Fixed NLP        Infeasible           12.1            4.2    65.29%     12.41
+        27   Feasibility NLP                 3           12.1            4.2    65.29%     12.49
+         1           restrLP              11.1           12.1            4.2    65.29%     12.52
+        28         Fixed NLP        Infeasible           12.1            4.2    65.29%     12.60
+        28   Feasibility NLP                 1           12.1            4.2    65.29%     12.68
+         1           restrLP               8.6           12.1            4.2    65.29%     12.70
+        29         Fixed NLP        Infeasible           12.1            4.2    65.29%     12.78
+        29   Feasibility NLP                 5           12.1            4.2    65.29%     12.87
+         1           restrLP              11.1           12.1            4.2    65.29%     13.19
+*       30         Fixed NLP              11.1           11.1            4.2    62.16%     13.30
+         1           restrLP               8.5           11.1            4.2    62.16%     13.38
+        31         Fixed NLP        Infeasible           11.1            4.2    62.16%     13.47
+        31   Feasibility NLP                 9           11.1            4.2    62.16%     13.55
+         1           restrLP              10.1           11.1            4.3    61.26%     13.90
+        32         Fixed NLP        Infeasible           11.1            4.3    61.26%     13.98
+        32   Feasibility NLP                 4           11.1            4.3    61.26%     14.06
+         1           restrLP              10.9           11.1            4.3    61.26%     14.14
+        33         Fixed NLP        Infeasible           11.1            4.3    61.26%     14.23
+        33   Feasibility NLP                 1           11.1            4.3    61.26%     14.31
+         1           restrLP              10.8           11.1            4.3    61.26%     14.36
+        34         Fixed NLP        Infeasible           11.1            4.3    61.26%     14.45
+        34   Feasibility NLP                 1           11.1            4.3    61.26%     14.53
+         1           restrLP              10.5           11.1            4.3    61.26%     14.54
+        35         Fixed NLP        Infeasible           11.1            4.3    61.26%     14.63
+        35   Feasibility NLP                 3           11.1            4.3    61.26%     14.71
+         1           restrLP              10.6           11.1            4.3    61.26%     14.79
+        36         Fixed NLP        Infeasible           11.1            4.3    61.26%     14.87
+        36   Feasibility NLP                 4           11.1            4.3    61.26%     14.96
+         1           restrLP               8.3           11.1            4.3    61.26%     14.99
+        37         Fixed NLP        Infeasible           11.1            4.3    61.26%     15.08
+        37   Feasibility NLP                 9           11.1            4.3    61.26%     15.16
+         1           restrLP               9.8           11.1            4.3    61.26%     15.18
+        38         Fixed NLP        Infeasible           11.1            4.3    61.26%     15.26
+        38   Feasibility NLP                 3           11.1            4.3    61.26%     15.34
+         1           restrLP              10.2           11.1            4.3    61.26%     15.35
+        39         Fixed NLP        Infeasible           11.1            4.3    61.26%     15.43
+        39   Feasibility NLP                 2           11.1            4.3    61.26%     15.51
+         1           restrLP              10.8           11.1            4.3    61.26%     15.58
+        40         Fixed NLP        Infeasible           11.1            4.3    61.26%     15.66
+        40   Feasibility NLP                 2           11.1            4.3    61.26%     15.74
+         1           restrLP              10.2           11.1            4.3    61.26%     15.76
+        41         Fixed NLP        Infeasible           11.1            4.3    61.26%     15.84
+        41   Feasibility NLP                 2           11.1            4.3    61.26%     15.93
+         1           restrLP               8.7           11.1            4.3    61.26%     16.02
+        42         Fixed NLP        Infeasible           11.1            4.3    61.26%     16.11
+        42   Feasibility NLP                 5           11.1            4.3    61.26%     16.19
+         1           restrLP              10.9           11.1            4.3    61.26%     16.30
+        43         Fixed NLP        Infeasible           11.1            4.3    61.26%     16.38
+        43   Feasibility NLP                 4           11.1            4.3    61.26%     16.46
+         1           restrLP                10           11.1            4.3    61.26%     16.50
+        44         Fixed NLP        Infeasible           11.1            4.3    61.26%     16.58
+        44   Feasibility NLP                 2           11.1            4.3    61.26%     16.65
+         1           restrLP              10.7           11.1            4.3    61.26%     16.73
+        45         Fixed NLP        Infeasible           11.1            4.3    61.26%     16.82
+        45   Feasibility NLP                 1           11.1            4.3    61.26%     16.90
+         1           restrLP              10.9           11.1            4.3    61.26%     17.20
+        46         Fixed NLP        Infeasible           11.1            4.3    61.26%     17.29
+        46   Feasibility NLP                 5           11.1            4.3    61.26%     17.37
+         1           restrLP              10.9           11.1            4.3    61.26%     17.52
+        47         Fixed NLP        Infeasible           11.1            4.3    61.26%     17.59
+        47   Feasibility NLP                 1           11.1            4.3    61.26%     17.67
+         1           restrLP              10.1           11.1            4.3    61.26%     17.97
+        48         Fixed NLP        Infeasible           11.1            4.3    61.26%     18.05
+        48   Feasibility NLP                 5           11.1            4.3    61.26%     18.13
+         1           restrLP              10.1           11.1            4.3    61.26%     18.18
+        49         Fixed NLP        Infeasible           11.1            4.3    61.26%     18.26
+        49   Feasibility NLP                 2           11.1            4.3    61.26%     18.34
+         1           restrLP               9.3           11.1            4.3    61.26%     18.48
+        50         Fixed NLP        Infeasible           11.1            4.3    61.26%     18.56
+        50   Feasibility NLP                 6           11.1            4.3    61.26%     18.64
+         1           restrLP               9.8           11.1            4.3    61.26%     18.77
+        51         Fixed NLP        Infeasible           11.1            4.3    61.26%     18.85
+        51   Feasibility NLP                 2           11.1            4.3    61.26%     18.93
+         1           restrLP              10.1           11.1            4.3    61.26%     18.98
+        52         Fixed NLP        Infeasible           11.1            4.3    61.26%     19.06
+        52   Feasibility NLP                 2           11.1            4.3    61.26%     19.14
+         1           restrLP              10.6           11.1            4.3    61.26%     19.15
+        53         Fixed NLP        Infeasible           11.1            4.3    61.26%     19.23
+        53   Feasibility NLP                 4           11.1            4.3    61.26%     19.31
+         1           restrLP               9.7           11.1            4.3    61.26%     19.76
+        54         Fixed NLP        Infeasible           11.1            4.3    61.26%     19.84
+        54   Feasibility NLP                 3           11.1            4.3    61.26%     19.92
+         1           restrLP               9.7           11.1            4.3    61.26%     20.04
+        55         Fixed NLP        Infeasible           11.1            4.3    61.26%     20.13
+        55   Feasibility NLP                 2           11.1            4.3    61.26%     20.21
+         1           restrLP               9.8           11.1            4.3    61.26%     20.37
+        56         Fixed NLP        Infeasible           11.1            4.3    61.26%     20.45
+        56   Feasibility NLP                 9           11.1            4.3    61.26%     20.54
+         1           restrLP               9.6           11.1            4.3    61.26%     20.66
+        57         Fixed NLP        Infeasible           11.1            4.3    61.26%     20.75
+        57   Feasibility NLP                 3           11.1            4.3    61.26%     20.83
+         1           restrLP              10.9           11.1            4.3    61.26%     20.89
+        58         Fixed NLP        Infeasible           11.1            4.3    61.26%     20.97
+        58   Feasibility NLP                 2           11.1            4.3    61.26%     21.05
+         1           restrLP              10.7           11.1            4.3    61.26%     21.09
+        59         Fixed NLP        Infeasible           11.1            4.3    61.26%     21.17
+        59   Feasibility NLP                 4           11.1            4.3    61.26%     21.25
+         1           restrLP              10.9           11.1            4.3    61.26%     21.33
+        60         Fixed NLP        Infeasible           11.1            4.3    61.26%     21.41
+        60   Feasibility NLP                 3           11.1            4.3    61.26%     21.49
+         1           restrLP               8.8           11.1            4.3    61.26%     21.79
+        61         Fixed NLP        Infeasible           11.1            4.3    61.26%     21.87
+        61   Feasibility NLP                 5           11.1            4.3    61.26%     21.95
+         1           restrLP                11           11.1            4.3    61.26%     22.37
+        62         Fixed NLP        Infeasible           11.1            4.3    61.26%     22.45
+        62   Feasibility NLP                 1           11.1            4.3    61.26%     22.53
+         1           restrLP              10.9           11.1            4.3    61.26%     22.72
+        63         Fixed NLP        Infeasible           11.1            4.3    61.26%     22.80
+        63   Feasibility NLP                 1           11.1            4.3    61.26%     22.88
+         1           restrLP              10.9           11.1            4.3    61.26%     22.89
+        64         Fixed NLP        Infeasible           11.1            4.3    61.26%     22.97
+        64   Feasibility NLP                 1           11.1            4.3    61.26%     23.05
+         1           restrLP              10.4           11.1            4.3    61.26%     23.69
+        65         Fixed NLP        Infeasible           11.1            4.3    61.26%     23.78
+        65   Feasibility NLP                 3           11.1            4.3    61.26%     23.86
+         1           restrLP              10.4           11.1            4.3    61.26%     24.27
+        66         Fixed NLP        Infeasible           11.1            4.3    61.26%     24.35
+        66   Feasibility NLP                 1           11.1            4.3    61.26%     24.44
+         1           restrLP              10.9           11.1            4.3    61.26%     24.50
+*       67         Fixed NLP              10.9           10.9            4.3    60.55%     24.62
+         1           restrLP              10.4           10.9            4.3    60.55%     24.89
+        68         Fixed NLP        Infeasible           10.9            4.3    60.55%     24.98
+        68   Feasibility NLP                 2           10.9            4.3    60.55%     25.07
+         1           restrLP               8.8           10.9            4.3    60.55%     25.21
+        69         Fixed NLP        Infeasible           10.9            4.3    60.55%     25.29
+        69   Feasibility NLP                 6           10.9            4.3    60.55%     25.37
+         1           restrLP              10.4           10.9            4.3    60.55%     25.49
+        70         Fixed NLP        Infeasible           10.9            4.3    60.55%     25.58
+        70   Feasibility NLP                 2           10.9            4.3    60.55%     25.66
+         1           restrLP               9.9           10.9            4.3    60.55%     26.92
+        71         Fixed NLP        Infeasible           10.9            4.3    60.55%     27.01
+        71   Feasibility NLP                 2           10.9            4.3    60.55%     27.09
+         1           restrLP              10.4           10.9            4.3    60.55%     28.04
+        72         Fixed NLP        Infeasible           10.9            4.3    60.55%     28.13
+        72   Feasibility NLP                 1           10.9            4.3    60.55%     28.21
+         1           restrLP              10.4           10.9            4.3    60.55%     28.61
+*       73         Fixed NLP              10.4           10.4            4.3    58.65%     28.72
+         1           restrLP               9.8           10.4            4.4    57.69%     28.97
+        74         Fixed NLP        Infeasible           10.4            4.4    57.69%     29.06
+        74   Feasibility NLP                 3           10.4            4.4    57.69%     29.14
+         1           restrLP              10.2           10.4            4.4    57.69%     30.04
+        75         Fixed NLP        Infeasible           10.4            4.4    57.69%     30.12
+        75   Feasibility NLP                 4           10.4            4.4    57.69%     30.20
+         1           restrLP               9.6           10.4            4.4    57.69%     30.79
+        76         Fixed NLP        Infeasible           10.4            4.4    57.69%     30.90
+        76   Feasibility NLP                 2           10.4            4.4    57.69%     30.99
+         1           restrLP               9.9           10.4            4.4    57.69%     32.07
+        77         Fixed NLP        Infeasible           10.4            4.4    57.69%     32.16
+        77   Feasibility NLP                 3           10.4            4.4    57.69%     32.25
+         1           restrLP                10           10.4            4.4    57.69%     32.83
+        78         Fixed NLP        Infeasible           10.4            4.4    57.69%     32.93
+        78   Feasibility NLP                 2           10.4            4.4    57.69%     33.01
+         1           restrLP              10.2           10.4            4.4    57.69%     33.26
+        79         Fixed NLP        Infeasible           10.4            4.4    57.69%     33.35
+        79   Feasibility NLP                 1           10.4            4.4    57.69%     33.45
+         1           restrLP               9.5           10.4            4.4    57.69%     34.33
+        80         Fixed NLP        Infeasible           10.4            4.4    57.69%     34.43
+        80   Feasibility NLP                 2           10.4            4.4    57.69%     34.52
+         1           restrLP                10           10.4            4.4    57.69%     34.73
+        81         Fixed NLP        Infeasible           10.4            4.4    57.69%     34.82
+        81   Feasibility NLP                 4           10.4            4.4    57.69%     34.92
+         1           restrLP               9.8           10.4            4.5    56.73%     36.65
+        82         Fixed NLP        Infeasible           10.4            4.5    56.73%     36.74
+        82   Feasibility NLP                 2           10.4            4.5    56.73%     36.84
+         1           restrLP               9.9           10.4            4.5    56.73%     37.11
+        83         Fixed NLP        Infeasible           10.4            4.5    56.73%     37.20
+        83   Feasibility NLP                 2           10.4            4.5    56.73%     37.29
+         1           restrLP              10.1           10.4            4.5    56.73%     38.89
+        84         Fixed NLP        Infeasible           10.4            4.5    56.73%     38.97
+        84   Feasibility NLP                 4           10.4            4.5    56.73%     39.05
+         1           restrLP               9.3           10.4            4.5    56.73%     39.33
+        85         Fixed NLP        Infeasible           10.4            4.5    56.73%     39.41
+        85   Feasibility NLP                 3           10.4            4.5    56.73%     39.50
+         1           restrLP               9.2           10.4            4.5    56.73%     39.90
+        86         Fixed NLP        Infeasible           10.4            4.5    56.73%     39.98
+        86   Feasibility NLP                 6           10.4            4.5    56.73%     40.06
+         1           restrLP               9.7           10.4            4.5    56.73%     40.70
+        87         Fixed NLP        Infeasible           10.4            4.5    56.73%     40.78
+        87   Feasibility NLP                 1           10.4            4.5    56.73%     40.86
+         1           restrLP               9.6           10.4            4.5    56.73%     41.19
+        88         Fixed NLP        Infeasible           10.4            4.5    56.73%     41.27
+        88   Feasibility NLP                 2           10.4            4.5    56.73%     41.37
+         1           restrLP                10           10.4            4.5    56.73%     42.93
+        89         Fixed NLP        Infeasible           10.4            4.5    56.73%     43.04
+        89   Feasibility NLP                 4           10.4            4.5    56.73%     43.14
+         1           restrLP               9.5           10.4            4.5    56.73%     43.50
+        90         Fixed NLP        Infeasible           10.4            4.5    56.73%     43.60
+        90   Feasibility NLP                 3           10.4            4.5    56.73%     43.68
+         1           restrLP               9.5           10.4            4.5    56.73%     43.70
+        91         Fixed NLP        Infeasible           10.4            4.5    56.73%     43.80
+        91   Feasibility NLP                 3           10.4            4.5    56.73%     43.89
+         1           restrLP               9.5           10.4            4.5    56.73%     44.46
+        92         Fixed NLP        Infeasible           10.4            4.5    56.73%     44.55
+        92   Feasibility NLP                 6           10.4            4.5    56.73%     44.63
+         1           restrLP                10           10.4            4.5    56.73%     45.14
+        93         Fixed NLP        Infeasible           10.4            4.5    56.73%     45.24
+        93   Feasibility NLP                 2           10.4            4.5    56.73%     45.32
+         1           restrLP               9.8           10.4            4.5    56.73%     47.83
+        94         Fixed NLP        Infeasible           10.4            4.5    56.73%     47.93
+        94   Feasibility NLP                 3           10.4            4.5    56.73%     48.03
+         1           restrLP               9.5           10.4            4.5    56.73%     50.28
+        95         Fixed NLP        Infeasible           10.4            4.5    56.73%     50.38
+        95   Feasibility NLP                 3           10.4            4.5    56.73%     50.48
+         1           restrLP               9.8           10.4            4.5    56.73%     50.86
+        96         Fixed NLP        Infeasible           10.4            4.5    56.73%     50.96
+        96   Feasibility NLP                 2           10.4            4.5    56.73%     51.04
+         1           restrLP                10           10.4            4.6    55.77%     51.22
+        97         Fixed NLP        Infeasible           10.4            4.6    55.77%     51.31
+        97   Feasibility NLP                 3           10.4            4.6    55.77%     51.40
+         1           restrLP               9.8           10.4            4.6    55.77%     51.89
+        98         Fixed NLP        Infeasible           10.4            4.6    55.77%     51.98
+        98   Feasibility NLP                 4           10.4            4.6    55.77%     52.07
+         1           restrLP               8.9           10.4            4.6    55.77%     52.89
+        99         Fixed NLP        Infeasible           10.4            4.6    55.77%     52.98
+        99   Feasibility NLP                 4           10.4            4.6    55.77%     53.08
+         1           restrLP              10.3           10.4            4.6    55.77%     53.59
+       100         Fixed NLP        Infeasible           10.4            4.6    55.77%     53.68
+       100   Feasibility NLP                 2           10.4            4.6    55.77%     53.77
+         1           restrLP              10.3           10.4            4.6    55.77%     56.31
+       101         Fixed NLP        Infeasible           10.4            4.6    55.77%     56.39
+       101   Feasibility NLP                 2           10.4            4.6    55.77%     56.48
+         1           restrLP              10.3           10.4            4.6    55.77%     57.24
+       102         Fixed NLP        Infeasible           10.4            4.6    55.77%     57.34
+       102   Feasibility NLP                 2           10.4            4.6    55.77%     57.42
+         1           restrLP                10           10.4            4.6    55.77%     58.09
+       103         Fixed NLP        Infeasible           10.4            4.6    55.77%     58.18
+       103   Feasibility NLP                 3           10.4            4.6    55.77%     58.28
+         1           restrLP                10           10.4            4.6    55.77%     58.98
+       104         Fixed NLP        Infeasible           10.4            4.6    55.77%     59.08
+       104   Feasibility NLP                 2           10.4            4.6    55.77%     59.17
+         1           restrLP               9.8           10.4            4.6    55.77%     62.79
+       105         Fixed NLP        Infeasible           10.4            4.6    55.77%     62.88
+       105   Feasibility NLP                 2           10.4            4.6    55.77%     62.96
+         1           restrLP              10.3           10.4            4.6    55.77%     63.59
+       106         Fixed NLP        Infeasible           10.4            4.6    55.77%     63.68
+       106   Feasibility NLP                 2           10.4            4.6    55.77%     63.78
+         1           restrLP              10.2           10.4            4.6    55.77%     64.16
+       107         Fixed NLP        Infeasible           10.4            4.6    55.77%     64.26
+       107   Feasibility NLP                 4           10.4            4.6    55.77%     64.37
+         1           restrLP              10.2           10.4            4.6    55.77%     64.47
+       108         Fixed NLP        Infeasible           10.4            4.6    55.77%     64.55
+       108   Feasibility NLP                 2           10.4            4.6    55.77%     64.64
+         1           restrLP               9.7           10.4            4.6    55.77%     70.68
+       109         Fixed NLP        Infeasible           10.4            4.6    55.77%     70.77
+       109   Feasibility NLP                 4           10.4            4.6    55.77%     70.86
+         1           restrLP               9.7           10.4            4.6    55.77%     71.18
+       110         Fixed NLP        Infeasible           10.4            4.6    55.77%     71.27
+       110   Feasibility NLP                 2           10.4            4.6    55.77%     71.36
+         1           restrLP               9.9           10.4            4.7    54.81%     73.66
+       111         Fixed NLP        Infeasible           10.4            4.7    54.81%     73.77
+       111   Feasibility NLP                 2           10.4            4.7    54.81%     73.88
+         1           restrLP               9.7           10.4            4.7    54.81%     74.10
+       112         Fixed NLP        Infeasible           10.4            4.7    54.81%     74.19
+       112   Feasibility NLP                 5           10.4            4.7    54.81%     74.29
+         1           restrLP              10.3           10.4            4.7    54.81%     79.12
+       113         Fixed NLP        Infeasible           10.4            4.7    54.81%     79.20
+       113   Feasibility NLP                 2           10.4            4.7    54.81%     79.29
+         1           restrLP               9.8           10.4            4.7    54.81%     79.37
+       114         Fixed NLP        Infeasible           10.4            4.7    54.81%     79.47
+       114   Feasibility NLP                 1           10.4            4.7    54.81%     79.55
+         1           restrLP              10.3           10.4            4.7    54.81%     83.02
+       115         Fixed NLP        Infeasible           10.4            4.7    54.81%     83.11
+       115   Feasibility NLP                 4           10.4            4.7    54.81%     83.21
+         1           restrLP              10.1           10.4            4.7    54.81%     83.63
+       116         Fixed NLP        Infeasible           10.4            4.7    54.81%     83.72
+       116   Feasibility NLP                 3           10.4            4.7    54.81%     83.82
+         1           restrLP              10.3           10.4            4.7    54.81%     84.18
+       117         Fixed NLP        Infeasible           10.4            4.7    54.81%     84.28
+       117   Feasibility NLP                 3           10.4            4.7    54.81%     84.36
+         1           restrLP              10.1           10.4            4.7    54.81%     85.52
+       118         Fixed NLP        Infeasible           10.4            4.7    54.81%     85.61
+       118   Feasibility NLP                 2           10.4            4.7    54.81%     85.70
+         1           restrLP              10.3           10.4            4.7    54.81%     85.92
+       119         Fixed NLP        Infeasible           10.4            4.7    54.81%     86.00
+       119   Feasibility NLP                 2           10.4            4.7    54.81%     86.09
+         1           restrLP              10.2           10.4            4.7    54.81%     87.42
+       120         Fixed NLP        Infeasible           10.4            4.7    54.81%     87.53
+       120   Feasibility NLP                 1           10.4            4.7    54.81%     87.62
+         1           restrLP              10.2           10.4            4.7    54.81%     87.84
+       121         Fixed NLP        Infeasible           10.4            4.7    54.81%     87.92
+       121   Feasibility NLP                 2           10.4            4.7    54.81%     88.01
+         1           restrLP               9.8           10.4            4.8    53.85%     90.39
+       122         Fixed NLP        Infeasible           10.4            4.8    53.85%     90.48
+       122   Feasibility NLP                 2           10.4            4.8    53.85%     90.57
+         1           restrLP              10.1           10.4            4.8    53.85%     91.09
+       123         Fixed NLP        Infeasible           10.4            4.8    53.85%     91.18
+       123   Feasibility NLP                 2           10.4            4.8    53.85%     91.29
+         1           restrLP               9.9           10.4            4.8    53.85%     93.25
+       124         Fixed NLP        Infeasible           10.4            4.8    53.85%     93.34
+       124   Feasibility NLP                 3           10.4            4.8    53.85%     93.43
+         1           restrLP               9.9           10.4            4.8    53.85%     94.06
+       125         Fixed NLP        Infeasible           10.4            4.8    53.85%     94.16
+       125   Feasibility NLP                 3           10.4            4.8    53.85%     94.24
+         1           restrLP              10.2           10.4            4.8    53.85%     95.66
+       126         Fixed NLP        Infeasible           10.4            4.8    53.85%     95.76
+       126   Feasibility NLP                 1           10.4            4.8    53.85%     95.85
+         1           restrLP              10.3           10.4            4.8    53.85%     96.14
+       127         Fixed NLP        Infeasible           10.4            4.8    53.85%     96.24
+       127   Feasibility NLP                 2           10.4            4.8    53.85%     96.34
+         1           restrLP               9.8           10.4            4.8    53.85%     96.72
+       128         Fixed NLP        Infeasible           10.4            4.8    53.85%     96.82
+       128   Feasibility NLP                 1           10.4            4.8    53.85%     96.91
+         1           restrLP              10.3           10.4            4.8    53.85%     98.81
+       129         Fixed NLP        Infeasible           10.4            4.8    53.85%     98.89
+       129   Feasibility NLP                 4           10.4            4.8    53.85%     98.99
+         1           restrLP                10           10.4            4.8    53.85%     99.27
+       130         Fixed NLP        Infeasible           10.4            4.8    53.85%     99.35
+       130   Feasibility NLP                 2           10.4            4.8    53.85%     99.44
+         1           restrLP              10.2           10.4            4.8    53.85%    105.95
+       131         Fixed NLP        Infeasible           10.4            4.8    53.85%    106.03
+       131   Feasibility NLP                 2           10.4            4.8    53.85%    106.12
+         1           restrLP              10.1           10.4            4.9    52.88%    112.49
+       132         Fixed NLP        Infeasible           10.4            4.9    52.88%    112.58
+       132   Feasibility NLP                 2           10.4            4.9    52.88%    112.68
+         1           restrLP               9.9           10.4            4.9    52.88%    117.09
+       133         Fixed NLP        Infeasible           10.4            4.9    52.88%    117.19
+       133   Feasibility NLP                 2           10.4            4.9    52.88%    117.27
+         1           restrLP                10           10.4            4.9    52.88%    118.60
+       134         Fixed NLP        Infeasible           10.4            4.9    52.88%    118.68
+       134   Feasibility NLP                 4           10.4            4.9    52.88%    118.77
+         1           restrLP               9.8           10.4            4.9    52.88%    119.89
+       135         Fixed NLP        Infeasible           10.4            4.9    52.88%    119.98
+       135   Feasibility NLP                 2           10.4            4.9    52.88%    120.06
+         1           restrLP              10.3           10.4              5    51.92%    124.52
+       136         Fixed NLP        Infeasible           10.4              5    51.92%    124.62
+       136   Feasibility NLP                 1           10.4              5    51.92%    124.70
+         1           restrLP               9.9           10.4              5    51.92%    125.79
+       137         Fixed NLP        Infeasible           10.4              5    51.92%    125.89
+       137   Feasibility NLP                 3           10.4              5    51.92%    125.98
+         1           restrLP              10.1           10.4              5    51.92%    126.50
+       138         Fixed NLP        Infeasible           10.4              5    51.92%    126.60
+       138   Feasibility NLP                 3           10.4              5    51.92%    126.70
+         1           restrLP               9.9           10.4              5    51.92%    130.58
+       139         Fixed NLP        Infeasible           10.4              5    51.92%    130.68
+       139   Feasibility NLP                 2           10.4              5    51.92%    130.78
+         1           restrLP              10.2           10.4              5    51.92%    133.48
+       140         Fixed NLP        Infeasible           10.4              5    51.92%    133.58
+       140   Feasibility NLP                 3           10.4              5    51.92%    133.67
+         1           restrLP              10.3           10.4              5    51.92%    135.50
+       141         Fixed NLP        Infeasible           10.4              5    51.92%    135.61
+       141   Feasibility NLP                 1           10.4              5    51.92%    135.70
+         1           restrLP              10.2           10.4            5.1    50.96%    144.80
+       142         Fixed NLP        Infeasible           10.4            5.1    50.96%    144.91
+       142   Feasibility NLP                 2           10.4            5.1    50.96%    145.01
+         1           restrLP              10.3           10.4            5.1    50.96%    154.68
+       143         Fixed NLP        Infeasible           10.4            5.1    50.96%    154.78
+       143   Feasibility NLP                 2           10.4            5.1    50.96%    154.87
+         1           restrLP               9.9           10.4            5.2    50.00%    169.88
+       144         Fixed NLP        Infeasible           10.4            5.2    50.00%    169.98
+       144   Feasibility NLP                 2           10.4            5.2    50.00%    170.07
+         1           restrLP               9.9           10.4            5.2    50.00%    170.69
+       145         Fixed NLP        Infeasible           10.4            5.2    50.00%    170.78
+       145   Feasibility NLP                 2           10.4            5.2    50.00%    170.85
+         1           restrLP               9.6           10.4            5.2    50.00%    171.74
+       146         Fixed NLP        Infeasible           10.4            5.2    50.00%    171.83
+       146   Feasibility NLP                 6           10.4            5.2    50.00%    171.92
+         1           restrLP               8.7           10.4            5.2    50.00%    172.23
+       147         Fixed NLP        Infeasible           10.4            5.2    50.00%    172.32
+       147   Feasibility NLP                 4           10.4            5.2    50.00%    172.40
+         1           restrLP              10.1           10.4            5.2    50.00%    172.53
+       148         Fixed NLP        Infeasible           10.4            5.2    50.00%    172.62
+       148   Feasibility NLP                 1           10.4            5.2    50.00%    172.71
+         1           restrLP               9.6           10.4            5.2    50.00%    174.45
+       149         Fixed NLP        Infeasible           10.4            5.2    50.00%    174.55
+       149   Feasibility NLP                 3           10.4            5.2    50.00%    174.64
+         1           restrLP              10.1           10.4            5.2    50.00%    175.08
+       150         Fixed NLP        Infeasible           10.4            5.2    50.00%    175.18
+       150   Feasibility NLP                 2           10.4            5.2    50.00%    175.27
+         1           restrLP              10.1           10.4            5.2    50.00%    175.38
+       151         Fixed NLP        Infeasible           10.4            5.2    50.00%    175.46
+       151   Feasibility NLP                 2           10.4            5.2    50.00%    175.55
+         1           restrLP              10.1           10.4            5.2    50.00%    177.12
+       152         Fixed NLP        Infeasible           10.4            5.2    50.00%    177.20
+       152   Feasibility NLP                 2           10.4            5.2    50.00%    177.28
+         1           restrLP              10.1           10.4            5.2    50.00%    177.90
+       153         Fixed NLP        Infeasible           10.4            5.2    50.00%    178.00
+       153   Feasibility NLP                 2           10.4            5.2    50.00%    178.08
+         1           restrLP              10.1           10.4            5.2    50.00%    181.54
+       154         Fixed NLP        Infeasible           10.4            5.2    50.00%    181.64
+       154   Feasibility NLP                 1           10.4            5.2    50.00%    181.73
+         1           restrLP              10.1           10.4            5.2    50.00%    181.85
+       155         Fixed NLP        Infeasible           10.4            5.2    50.00%    181.95
+       155   Feasibility NLP                 2           10.4            5.2    50.00%    182.04
+         1           restrLP              10.1           10.4            5.2    50.00%    184.33
+       156         Fixed NLP        Infeasible           10.4            5.2    50.00%    184.42
+       156   Feasibility NLP                 2           10.4            5.2    50.00%    184.52
+         1           restrLP               9.6           10.4            5.2    50.00%    187.79
+       157         Fixed NLP        Infeasible           10.4            5.2    50.00%    187.88
+       157   Feasibility NLP                 3           10.4            5.2    50.00%    187.97
+         1           restrLP              10.1           10.4            5.2    50.00%    188.18
+       158         Fixed NLP        Infeasible           10.4            5.2    50.00%    188.27
+       158   Feasibility NLP                 2           10.4            5.2    50.00%    188.36
+         1           restrLP               9.6           10.4            5.2    50.00%    189.12
+       159         Fixed NLP        Infeasible           10.4            5.2    50.00%    189.21
+       159   Feasibility NLP                 3           10.4            5.2    50.00%    189.31
+         1           restrLP              10.3           10.4            5.3    49.04%    195.84
+       160         Fixed NLP        Infeasible           10.4            5.3    49.04%    195.94
+       160   Feasibility NLP                 3           10.4            5.3    49.04%    196.03
+         1           restrLP              10.2           10.4            5.3    49.04%    196.17
+       161         Fixed NLP        Infeasible           10.4            5.3    49.04%    196.28
+       161   Feasibility NLP                 3           10.4            5.3    49.04%    196.37
+         1           restrLP              10.2           10.4            5.3    49.04%    198.16
+       162         Fixed NLP        Infeasible           10.4            5.3    49.04%    198.25
+       162   Feasibility NLP                 1           10.4            5.3    49.04%    198.33
+         1           restrLP              10.3           10.4            5.3    49.04%    203.62
+       163         Fixed NLP        Infeasible           10.4            5.3    49.04%    203.71
+       163   Feasibility NLP                 2           10.4            5.3    49.04%    203.79
+         1           restrLP                10           10.4            5.3    49.04%    204.06
+       164         Fixed NLP        Infeasible           10.4            5.3    49.04%    204.15
+       164   Feasibility NLP                 1           10.4            5.3    49.04%    204.23
+         1           restrLP              10.2           10.4            5.3    49.04%    206.81
+       165         Fixed NLP        Infeasible           10.4            5.3    49.04%    206.90
+       165   Feasibility NLP                 1           10.4            5.3    49.04%    206.99
+         1           restrLP               9.6           10.4            5.3    49.04%    208.48
+       166         Fixed NLP        Infeasible           10.4            5.3    49.04%    208.58
+       166   Feasibility NLP                 4           10.4            5.3    49.04%    208.66
+         1           restrLP              10.2           10.4            5.3    49.04%    211.02
+       167         Fixed NLP        Infeasible           10.4            5.3    49.04%    211.11
+       167   Feasibility NLP                 1           10.4            5.3    49.04%    211.20
+         1           restrLP               9.7           10.4            5.3    49.04%    212.27
+       168         Fixed NLP        Infeasible           10.4            5.3    49.04%    212.38
+       168   Feasibility NLP                 3           10.4            5.3    49.04%    212.46
+         1           restrLP              10.2           10.4            5.3    49.04%    214.83
+       169         Fixed NLP        Infeasible           10.4            5.3    49.04%    214.92
+       169   Feasibility NLP                 3           10.4            5.3    49.04%    215.02
+         1           restrLP               9.7           10.4            5.3    49.04%    217.44
+       170         Fixed NLP        Infeasible           10.4            5.3    49.04%    217.53
+       170   Feasibility NLP                 2           10.4            5.3    49.04%    217.62
+         1           restrLP               9.7           10.4            5.3    49.04%    217.79
+       171         Fixed NLP        Infeasible           10.4            5.3    49.04%    217.88
+       171   Feasibility NLP                 3           10.4            5.3    49.04%    217.96
+         1           restrLP              10.2           10.4            5.3    49.04%    219.94
+       172         Fixed NLP        Infeasible           10.4            5.3    49.04%    220.03
+       172   Feasibility NLP                 2           10.4            5.3    49.04%    220.11
+         1           restrLP               9.6           10.4            5.3    49.04%    222.64
+       173         Fixed NLP        Infeasible           10.4            5.3    49.04%    222.74
+       173   Feasibility NLP                 4           10.4            5.3    49.04%    222.83
+         1           restrLP              10.2           10.4            5.3    49.04%    229.47
+       174         Fixed NLP        Infeasible           10.4            5.3    49.04%    229.56
+       174   Feasibility NLP                 1           10.4            5.3    49.04%    229.65
+         1           restrLP              10.2           10.4            5.3    49.04%    230.33
+       175         Fixed NLP        Infeasible           10.4            5.3    49.04%    230.42
+       175   Feasibility NLP                 3           10.4            5.3    49.04%    230.50
+         1           restrLP               9.7           10.4            5.3    49.04%    235.25
+       176         Fixed NLP        Infeasible           10.4            5.3    49.04%    235.33
+       176   Feasibility NLP                 3           10.4            5.3    49.04%    235.41
+         1           restrLP               9.8           10.4            5.3    49.04%    239.99
+       177         Fixed NLP        Infeasible           10.4            5.3    49.04%    240.08
+       177   Feasibility NLP                 2           10.4            5.3    49.04%    240.16
+         1           restrLP               9.6           10.4            5.3    49.04%    240.45
+       178         Fixed NLP        Infeasible           10.4            5.3    49.04%    240.54
+       178   Feasibility NLP                 2           10.4            5.3    49.04%    240.62
+         1           restrLP               9.7           10.4            5.3    49.04%    241.04
+       179         Fixed NLP        Infeasible           10.4            5.3    49.04%    241.13
+       179   Feasibility NLP                 2           10.4            5.3    49.04%    241.23
+         1           restrLP               9.7           10.4            5.3    49.04%    244.66
+       180         Fixed NLP        Infeasible           10.4            5.3    49.04%    244.76
+       180   Feasibility NLP                 2           10.4            5.3    49.04%    244.85
+         1           restrLP              10.1           10.4            5.3    49.04%    251.35
+       181         Fixed NLP        Infeasible           10.4            5.3    49.04%    251.45
+       181   Feasibility NLP                 2           10.4            5.3    49.04%    251.53
+         1           restrLP              10.3           10.4            5.3    49.04%    252.79
+       182         Fixed NLP        Infeasible           10.4            5.3    49.04%    252.87
+       182   Feasibility NLP                 2           10.4            5.3    49.04%    252.96
+         1           restrLP              10.1           10.4            5.4    48.08%    254.56
+       183         Fixed NLP        Infeasible           10.4            5.4    48.08%    254.65
+       183   Feasibility NLP                 4           10.4            5.4    48.08%    254.73
+         1           restrLP              10.2           10.4            5.4    48.08%    256.38
+       184         Fixed NLP        Infeasible           10.4            5.4    48.08%    256.47
+       184   Feasibility NLP                 2           10.4            5.4    48.08%    256.56
+         1           restrLP               9.8           10.4            5.4    48.08%    260.42
+       185         Fixed NLP        Infeasible           10.4            5.4    48.08%    260.52
+       185   Feasibility NLP                 2           10.4            5.4    48.08%    260.60
+         1           restrLP                10           10.4            5.4    48.08%    262.38
+       186         Fixed NLP        Infeasible           10.4            5.4    48.08%    262.47
+       186   Feasibility NLP                 3           10.4            5.4    48.08%    262.55
+         1           restrLP               9.8           10.4            5.4    48.08%    274.35
+       187         Fixed NLP        Infeasible           10.4            5.4    48.08%    274.44
+       187   Feasibility NLP                 1           10.4            5.4    48.08%    274.52
+         1           restrLP              10.2           10.4            5.4    48.08%    277.77
+       188         Fixed NLP        Infeasible           10.4            5.4    48.08%    277.86
+       188   Feasibility NLP                 2           10.4            5.4    48.08%    277.94
+         1           restrLP                10           10.4            5.4    48.08%    285.16
+       189         Fixed NLP        Infeasible           10.4            5.4    48.08%    285.25
+       189   Feasibility NLP                 2           10.4            5.4    48.08%    285.34
+         1           restrLP               9.8           10.4            5.4    48.08%    286.22
+       190         Fixed NLP        Infeasible           10.4            5.4    48.08%    286.31
+       190   Feasibility NLP                 4           10.4            5.4    48.08%    286.39
+         1           restrLP              10.3           10.4            5.4    48.08%    287.04
+       191         Fixed NLP        Infeasible           10.4            5.4    48.08%    287.14
+       191   Feasibility NLP                 2           10.4            5.4    48.08%    287.22
+         1           restrLP              10.3           10.4            5.4    48.08%    287.53
+       192         Fixed NLP        Infeasible           10.4            5.4    48.08%    287.62
+       192   Feasibility NLP                 3           10.4            5.4    48.08%    287.70
+         1           restrLP              10.3           10.4            5.4    48.08%    288.87
+       193         Fixed NLP        Infeasible           10.4            5.4    48.08%    288.95
+       193   Feasibility NLP                 2           10.4            5.4    48.08%    289.03
+         1           restrLP               9.9           10.4            5.4    48.08%    298.92
+       194         Fixed NLP        Infeasible           10.4            5.4    48.08%    299.02
+       194   Feasibility NLP                 4           10.4            5.4    48.08%    299.10
+         1           restrLP              10.3           10.4            5.4    48.08%    299.44
+       195         Fixed NLP        Infeasible           10.4            5.4    48.08%    299.52
+       195   Feasibility NLP                 1           10.4            5.4    48.08%    299.60
+         1           restrLP               9.8           10.4            5.4    48.08%    300.26
+       196         Fixed NLP        Infeasible           10.4            5.4    48.08%    300.34
+       196   Feasibility NLP                 2           10.4            5.4    48.08%    300.41
+         1           restrLP               9.8           10.4            5.4    48.08%    305.33
+       197         Fixed NLP        Infeasible           10.4            5.4    48.08%    305.42
+       197   Feasibility NLP                 3           10.4            5.4    48.08%    305.50
+         1           restrLP              10.3           10.4            5.4    48.08%    306.76
+       198         Fixed NLP        Infeasible           10.4            5.4    48.08%    306.86
+       198   Feasibility NLP                 2           10.4            5.4    48.08%    306.94
+         1           restrLP               9.9           10.4            5.4    48.08%    309.31
+       199         Fixed NLP        Infeasible           10.4            5.4    48.08%    309.39
+       199   Feasibility NLP                 2           10.4            5.4    48.08%    309.47
+         1           restrLP               9.8           10.4            5.4    48.08%    314.66
+       200         Fixed NLP        Infeasible           10.4            5.4    48.08%    314.76
+       200   Feasibility NLP                 2           10.4            5.4    48.08%    314.84
+         1           restrLP              10.3           10.4            5.4    48.08%    320.01
+       201         Fixed NLP        Infeasible           10.4            5.4    48.08%    320.11
+       201   Feasibility NLP                 1           10.4            5.4    48.08%    320.21
+         1           restrLP              10.3           10.4            5.4    48.08%    320.42
+       202         Fixed NLP        Infeasible           10.4            5.4    48.08%    320.52
+       202   Feasibility NLP                 1           10.4            5.4    48.08%    320.61
+         1           restrLP              10.2           10.4            5.5    47.12%    338.53
+       203         Fixed NLP        Infeasible           10.4            5.5    47.12%    338.62
+       203   Feasibility NLP                 2           10.4            5.5    47.12%    338.70
+         1           restrLP              10.3           10.4            5.5    47.12%    340.91
+       204         Fixed NLP        Infeasible           10.4            5.5    47.12%    341.01
+       204   Feasibility NLP                 2           10.4            5.5    47.12%    341.09
+         1           restrLP               9.8           10.4            5.5    47.12%    341.77
+       205         Fixed NLP        Infeasible           10.4            5.5    47.12%    341.87
+       205   Feasibility NLP                 3           10.4            5.5    47.12%    341.96
+         1           restrLP               9.9           10.4            5.5    47.12%    346.45
+       206         Fixed NLP        Infeasible           10.4            5.5    47.12%    346.55
+       206   Feasibility NLP                 1           10.4            5.5    47.12%    346.65
+         1           restrLP              10.3           10.4            5.5    47.12%    350.72
+       207         Fixed NLP        Infeasible           10.4            5.5    47.12%    350.82
+       207   Feasibility NLP                 3           10.4            5.5    47.12%    350.91
+         1           restrLP               9.7           10.4            5.5    47.12%    370.44
+       208         Fixed NLP        Infeasible           10.4            5.5    47.12%    370.54
+       208   Feasibility NLP                 1           10.4            5.5    47.12%    370.62
+         1           restrLP              10.3           10.4            5.5    47.12%    371.35
+       209         Fixed NLP        Infeasible           10.4            5.5    47.12%    371.44
+       209   Feasibility NLP                 2           10.4            5.5    47.12%    371.53
+         1           restrLP              10.1           10.4            5.5    47.12%    373.32
+       210         Fixed NLP        Infeasible           10.4            5.5    47.12%    373.41
+       210   Feasibility NLP                 1           10.4            5.5    47.12%    373.50
+         1           restrLP               9.8           10.4            5.5    47.12%    374.56
+       211         Fixed NLP        Infeasible           10.4            5.5    47.12%    374.65
+       211   Feasibility NLP                 1           10.4            5.5    47.12%    374.73
+         1           restrLP              10.3           10.4            5.5    47.12%    375.50
+       212         Fixed NLP        Infeasible           10.4            5.5    47.12%    375.59
+       212   Feasibility NLP                 2           10.4            5.5    47.12%    375.68
+         1           restrLP               9.5           10.4            5.5    47.12%    401.57
+       213         Fixed NLP        Infeasible           10.4            5.5    47.12%    401.67
+       213   Feasibility NLP                 3           10.4            5.5    47.12%    401.76
+         1           restrLP                10           10.4            5.5    47.12%    401.85
+       214         Fixed NLP        Infeasible           10.4            5.5    47.12%    401.93
+       214   Feasibility NLP                 2           10.4            5.5    47.12%    402.02
+         1           restrLP                10           10.4            5.5    47.12%    404.15
+       215         Fixed NLP        Infeasible           10.4            5.5    47.12%    404.25
+       215   Feasibility NLP                 1           10.4            5.5    47.12%    404.34
+         1           restrLP                10           10.4            5.5    47.12%    412.64
+       216         Fixed NLP        Infeasible           10.4            5.5    47.12%    412.74
+       216   Feasibility NLP                 2           10.4            5.5    47.12%    412.82
+         1           restrLP                10           10.4            5.5    47.12%    416.41
+       217         Fixed NLP        Infeasible           10.4            5.5    47.12%    416.50
+       217   Feasibility NLP                 2           10.4            5.5    47.12%    416.59
+         1           restrLP                10           10.4            5.5    47.12%    419.28
+       218         Fixed NLP        Infeasible           10.4            5.5    47.12%    419.38
+       218   Feasibility NLP                 1           10.4            5.5    47.12%    419.47
+         1           restrLP                10           10.4            5.5    47.12%    420.81
+       219         Fixed NLP        Infeasible           10.4            5.5    47.12%    420.90
+       219   Feasibility NLP                 1           10.4            5.5    47.12%    420.99
+         1           restrLP               9.9           10.4            5.5    47.12%    423.31
+       220         Fixed NLP        Infeasible           10.4            5.5    47.12%    423.40
+       220   Feasibility NLP                 2           10.4            5.5    47.12%    423.48
+         1           restrLP               9.5           10.4            5.5    47.12%    430.27
+       221         Fixed NLP        Infeasible           10.4            5.5    47.12%    430.36
+       221   Feasibility NLP                 3           10.4            5.5    47.12%    430.44
+         1           restrLP               9.9           10.4            5.5    47.12%    444.76
+       222         Fixed NLP        Infeasible           10.4            5.5    47.12%    444.84
+       222   Feasibility NLP                 1           10.4            5.5    47.12%    444.91
+         1           restrLP                10           10.4            5.5    47.12%    446.54
+       223         Fixed NLP        Infeasible           10.4            5.5    47.12%    446.63
+       223   Feasibility NLP                 2           10.4            5.5    47.12%    446.70
+         1           restrLP                10           10.4            5.5    47.12%    446.80
+       224         Fixed NLP        Infeasible           10.4            5.5    47.12%    446.88
+       224   Feasibility NLP                 2           10.4            5.5    47.12%    446.95
+         1           restrLP               9.8           10.4            5.5    47.12%    450.56
+       225         Fixed NLP        Infeasible           10.4            5.5    47.12%    450.64
+       225   Feasibility NLP                 2           10.4            5.5    47.12%    450.71
+         1           restrLP              10.3           10.4            5.5    47.12%    457.16
+       226         Fixed NLP        Infeasible           10.4            5.5    47.12%    457.25
+       226   Feasibility NLP                 2           10.4            5.5    47.12%    457.33
+         1           restrLP              10.3           10.4            5.5    47.12%    460.80
+       227         Fixed NLP        Infeasible           10.4            5.5    47.12%    460.90
+       227   Feasibility NLP                 2           10.4            5.5    47.12%    461.00
+         1           restrLP              10.3           10.4            5.5    47.12%    461.02
+       228         Fixed NLP        Infeasible           10.4            5.5    47.12%    461.11
+       228   Feasibility NLP                 1           10.4            5.5    47.12%    461.20
+         1           restrLP              10.3           10.4            5.5    47.12%    482.17
+       229         Fixed NLP        Infeasible           10.4            5.5    47.12%    482.26
+       229   Feasibility NLP                 1           10.4            5.5    47.12%    482.34
+         1           restrLP                10           10.4            5.5    47.12%    510.21
+       230         Fixed NLP        Infeasible           10.4            5.5    47.12%    510.31
+       230   Feasibility NLP                 2           10.4            5.5    47.12%    510.41
+         1           restrLP               9.9           10.4            5.5    47.12%    514.65
+       231         Fixed NLP        Infeasible           10.4            5.5    47.12%    514.74
+       231   Feasibility NLP                 2           10.4            5.5    47.12%    514.83
+         1           restrLP               9.8           10.4            5.6    46.15%    526.49
+       232         Fixed NLP        Infeasible           10.4            5.6    46.15%    526.59
+       232   Feasibility NLP                 3           10.4            5.6    46.15%    526.68
+         1           restrLP              10.3           10.4            5.6    46.15%    528.99
+       233         Fixed NLP        Infeasible           10.4            5.6    46.15%    529.08
+       233   Feasibility NLP                 1           10.4            5.6    46.15%    529.18
+         1           restrLP                10           10.4            5.6    46.15%    543.78
+       234         Fixed NLP        Infeasible           10.4            5.6    46.15%    543.88
+       234   Feasibility NLP                 2           10.4            5.6    46.15%    543.97
+         1           restrLP               9.5           10.4            5.6    46.15%    546.08
+       235         Fixed NLP        Infeasible           10.4            5.6    46.15%    546.17
+       235   Feasibility NLP                 3           10.4            5.6    46.15%    546.26
+         1           restrLP               9.9           10.4            5.6    46.15%    589.07
+       236         Fixed NLP        Infeasible           10.4            5.6    46.15%    589.17
+       236   Feasibility NLP                 2           10.4            5.6    46.15%    589.26
+         1           restrLP               9.8           10.4            5.6    46.15%    589.78
+       237         Fixed NLP        Infeasible           10.4            5.6    46.15%    589.88
+       237   Feasibility NLP                 3           10.4            5.6    46.15%    589.97
+         1           restrLP               9.8           10.4            5.6    46.15%    589.98
+       238         Fixed NLP        Infeasible           10.4            5.6    46.15%    590.07
+       238   Feasibility NLP                 2           10.4            5.6    46.15%    590.14
+         1           restrLP               9.9           10.4            5.6    46.15%    602.97
+       239         Fixed NLP        Infeasible           10.4            5.6    46.15%    603.06
+       239   Feasibility NLP                 3           10.4            5.6    46.15%    603.14
+         1           restrLP                10           10.4            5.6    46.15%    619.94
+       240         Fixed NLP        Infeasible           10.4            5.6    46.15%    620.04
+       240   Feasibility NLP                 4           10.4            5.6    46.15%    620.11
+         1           restrLP                10           10.4            5.6    46.15%    627.66
+       241         Fixed NLP        Infeasible           10.4            5.6    46.15%    627.75
+       241   Feasibility NLP                 1           10.4            5.6    46.15%    627.83
+         1           restrLP               9.9           10.4            5.6    46.15%    643.60
+       242         Fixed NLP        Infeasible           10.4            5.6    46.15%    643.69
+       242   Feasibility NLP                 3           10.4            5.6    46.15%    643.78
+         1           restrLP              10.3           10.4            5.6    46.15%    645.77
+       243         Fixed NLP        Infeasible           10.4            5.6    46.15%    645.86
+       243   Feasibility NLP                 1           10.4            5.6    46.15%    645.94
+         1           restrLP              10.2           10.4            5.6    46.15%    651.50
+       244         Fixed NLP        Infeasible           10.4            5.6    46.15%    651.59
+       244   Feasibility NLP                 3           10.4            5.6    46.15%    651.68
+         1           restrLP                10           10.4            5.6    46.15%    659.70
+       245         Fixed NLP        Infeasible           10.4            5.6    46.15%    659.79
+       245   Feasibility NLP                 3           10.4            5.6    46.15%    659.86
+         1           restrLP              10.1           10.4            5.6    46.15%    660.66
+       246         Fixed NLP        Infeasible           10.4            5.6    46.15%    660.75
+       246   Feasibility NLP                 1           10.4            5.6    46.15%    660.83
+         1           restrLP              10.1           10.4            5.6    46.15%    662.89
+       247         Fixed NLP        Infeasible           10.4            5.6    46.15%    662.97
+       247   Feasibility NLP                 2           10.4            5.6    46.15%    663.05
+         1           restrLP              10.1           10.4            5.6    46.15%    673.04
+       248         Fixed NLP        Infeasible           10.4            5.6    46.15%    673.14
+       248   Feasibility NLP                 1           10.4            5.6    46.15%    673.22
+         1           restrLP               9.6           10.4            5.6    46.15%    686.52
+       249         Fixed NLP        Infeasible           10.4            5.6    46.15%    686.60
+       249   Feasibility NLP                 4           10.4            5.6    46.15%    686.68
+         1           restrLP                10           10.4            5.6    46.15%    708.81
+       250         Fixed NLP        Infeasible           10.4            5.6    46.15%    708.90
+       250   Feasibility NLP                 3           10.4            5.6    46.15%    708.98
+         1           restrLP               9.6           10.4            5.6    46.15%    709.61
+       251         Fixed NLP        Infeasible           10.4            5.6    46.15%    709.70
+       251   Feasibility NLP                 2           10.4            5.6    46.15%    709.78
+         1           restrLP              10.1           10.4            5.6    46.15%    729.88
+       252         Fixed NLP        Infeasible           10.4            5.6    46.15%    729.96
+       252   Feasibility NLP                 2           10.4            5.6    46.15%    730.03
+         1           restrLP              10.1           10.4            5.7    45.19%    746.76
+       253         Fixed NLP        Infeasible           10.4            5.7    45.19%    746.85
+       253   Feasibility NLP                 1           10.4            5.7    45.19%    746.93
+         1           restrLP                10           10.4            5.7    45.19%    751.01
+       254         Fixed NLP        Infeasible           10.4            5.7    45.19%    751.09
+       254   Feasibility NLP                 3           10.4            5.7    45.19%    751.17
+         1           restrLP              10.1           10.4            5.7    45.19%    761.65
+       255         Fixed NLP        Infeasible           10.4            5.7    45.19%    761.73
+       255   Feasibility NLP                 2           10.4            5.7    45.19%    761.81
+         1           restrLP               9.6           10.4            5.7    45.19%    775.58
+       256         Fixed NLP        Infeasible           10.4            5.7    45.19%    775.67
+       256   Feasibility NLP                 2           10.4            5.7    45.19%    775.76
+         1           restrLP              10.1           10.4            5.7    45.19%    780.74
+       257         Fixed NLP        Infeasible           10.4            5.7    45.19%    780.84
+       257   Feasibility NLP                 1           10.4            5.7    45.19%    780.93
+         1           restrLP               9.9           10.4            5.7    45.19%    817.46
+       258         Fixed NLP        Infeasible           10.4            5.7    45.19%    817.55
+       258   Feasibility NLP                 3           10.4            5.7    45.19%    817.63
+         1           restrLP              10.3           10.4            5.7    45.19%    822.17
+       259         Fixed NLP        Infeasible           10.4            5.7    45.19%    822.26
+       259   Feasibility NLP                 2           10.4            5.7    45.19%    822.35
+         1           restrLP              10.3           10.4            5.7    45.19%    832.08
+       260         Fixed NLP        Infeasible           10.4            5.7    45.19%    832.19
+       260   Feasibility NLP                 1           10.4            5.7    45.19%    832.29
+         1           restrLP              10.1           10.4            5.7    45.19%    846.56
+       261         Fixed NLP        Infeasible           10.4            5.7    45.19%    846.65
+       261   Feasibility NLP                 2           10.4            5.7    45.19%    846.72
+         1           restrLP              10.1           10.4            5.7    45.19%    847.92
+       262         Fixed NLP        Infeasible           10.4            5.7    45.19%    848.02
+       262   Feasibility NLP                 2           10.4            5.7    45.19%    848.10
+         1           restrLP              10.1           10.4            5.7    45.19%    853.84
+       263         Fixed NLP        Infeasible           10.4            5.7    45.19%    853.94
+       263   Feasibility NLP                 2           10.4            5.7    45.19%    854.03
+         1           restrLP               9.9           10.4            5.7    45.19%    857.11
+       264         Fixed NLP        Infeasible           10.4            5.7    45.19%    857.21
+       264   Feasibility NLP                 1           10.4            5.7    45.19%    857.29
+WARNING: Loading a SolverResults object with an 'aborted' status, but
+containing a solution
+MindtPy unable to converge bounds after 1 main iterations.
+Final bound values: Primal Bound: 10.4  Dual Bound: 5.7
+ ===============================================================================================
+ Primal integral          :   27.2264 
+ Dual integral            :   285.4211 
+ Primal-dual gap integral :   312.6474 

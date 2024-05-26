@@ -1,0 +1,367 @@
+Single-tree implementation is activated.
+Starting MindtPy version 1.0.0 using OA algorithm
+iteration_limit: 1
+stalling_limit: 5000
+time_limit: 900
+strategy: OA
+add_regularization: None
+call_after_main_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc67d0>
+call_before_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc6650>
+call_after_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc70d0>
+call_after_subproblem_feasible: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc7670>
+tee: true
+logger: <Logger pyomo.contrib.mindtpy (INFO)>
+logging_level: 20
+integer_to_binary: false
+add_no_good_cuts: false
+use_tabu_list: false
+single_tree: true
+solution_pool: false
+num_solution_iteration: 5
+cycling_check: true
+feasibility_norm: L_infinity
+differentiate_mode: reverse_symbolic
+use_mcpp: false
+calculate_dual_at_solution: false
+use_fbbt: false
+use_dual_bound: true
+partition_obj_nonlinear_terms: true
+quadratic_strategy: 0
+move_objective: false
+add_cuts_at_incumbent: false
+load_solutions: true
+use_baron_convexification: true
+heuristic_nonconvex: false
+init_strategy: rNLP
+level_coef: 0.5
+solution_limit: 10
+sqp_lag_scaling_coef: fixed
+fp_cutoffdecr: 0.1
+fp_iteration_limit: 20
+fp_projcuts: true
+fp_transfercuts: true
+fp_projzerotol: 0.0001
+fp_mipgap: 0.01
+fp_discrete_only: true
+fp_main_norm: L1
+fp_norm_constraint: true
+fp_norm_constraint_coef: 1.0
+add_slack: false
+max_slack: 1000.0
+OA_penalty_factor: 1000.0
+equality_relaxation: false
+linearize_inactive: false
+nlp_solver: gams
+nlp_solver_args:
+  solver: ipopth
+mip_solver: gurobi_persistent
+mip_solver_args:
+mip_solver_mipgap: 0.0001
+threads: 1
+regularization_mip_threads: 0
+solver_tee: false
+mip_solver_tee: false
+nlp_solver_tee: false
+mip_regularization_solver: None
+warm_start_fixed_nlp: true
+absolute_bound_tolerance: 0.0001
+relative_bound_tolerance: 0.001
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+zero_tolerance: 1e-08
+obj_bound: 1000000000000000.0
+continuous_var_bound: 10000000000.0
+integer_var_bound: 1000000000.0
+initial_bound_coef: 0.1
+
+-----------------------------------------------------------------------------------------------
+               Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo (MindtPy)                
+-----------------------------------------------------------------------------------------------
+For more information, please visit 
+https://pyomo.readthedocs.io/en/stable/contributed_packages/mindtpy.html
+If you use this software, please cite the following:
+Bernal, David E., et al. Mixed-integer nonlinear decomposition toolbox for Pyomo (MindtPy).
+Computer Aided Chemical Engineering. Vol. 44. Elsevier, 2018. 895-900.
+
+Original model has 189 constraints (100 nonlinear) and 0 disjunctions, with 145 variables, of which 100 are binary, 0 are integer, and 45 are continuous.
+rNLP is the initial strategy being used.
+
+ ===============================================================================================
+ Iteration | Subproblem Type | Objective Value | Primal Bound |   Dual Bound |   Gap   | Time(s)
+
+lp file generation time 0.24643707275390625
+time to add the cuts to pyomo model 0.09990501403808594
+Use the baron to tighten the bounds of variables and add initial cuts
+relaxed NLP is not solved to optimality.
+         -       Relaxed NLP                 0            inf           -inf      inf%      0.87
+         1           restrLP                 0            inf        -1e+100      nan%      1.85
+         1         Fixed NLP        Infeasible            inf        -1e+100      nan%      2.14
+         1   Feasibility NLP          0.162253            inf        -1e+100      nan%      2.24
+         1           restrLP           84.1709            inf              0      nan%      2.28
+         2         Fixed NLP        Infeasible            inf              0      nan%      2.40
+         2   Feasibility NLP           2.32694            inf              0      nan%      2.49
+         1           restrLP           69.6758            inf              0      nan%      2.52
+*        3         Fixed NLP           84.6718        84.6718              0   100.00%      2.69
+         1           restrLP           15.8609        84.6718              0   100.00%      2.69
+         4         Fixed NLP        Infeasible        84.6718              0   100.00%      2.99
+         4   Feasibility NLP          0.807932        84.6718              0   100.00%      3.09
+         1           restrLP           79.9527        84.6718              0   100.00%      3.14
+         5         Fixed NLP        Infeasible        84.6718              0   100.00%      3.27
+         5   Feasibility NLP           1.47716        84.6718              0   100.00%      3.37
+         1           restrLP           83.7565        84.6718              0   100.00%      3.40
+         6         Fixed NLP        Infeasible        84.6718              0   100.00%      3.61
+         6   Feasibility NLP           1.04975        84.6718              0   100.00%      3.71
+         1           restrLP           46.8118        84.6718              0   100.00%      3.74
+*        7         Fixed NLP           78.1568        78.1568              0   100.00%      3.92
+         1           restrLP           78.1568        78.1568              0   100.00%      3.93
+*        8         Fixed NLP           78.1568        78.1568              0   100.00%      4.10
+         1           restrLP           78.0206        78.1568              0   100.00%      4.11
+*        9         Fixed NLP           60.9047        60.9047              0   100.00%      4.29
+         1           restrLP           63.0031        60.9047              0   100.00%      4.32
+        10         Fixed NLP           67.0388        60.9047              0   100.00%      4.44
+         1           restrLP           67.0388        60.9047              0   100.00%      4.45
+        11         Fixed NLP           67.0388        60.9047              0   100.00%      4.58
+         1           restrLP                 0        60.9047              0   100.00%      4.60
+*       12         Fixed NLP           31.1047        31.1047              0   100.00%      4.77
+         1           restrLP           31.1047        31.1047              0   100.00%      4.79
+        13         Fixed NLP           31.1047        31.1047              0   100.00%      4.91
+         1           restrLP           20.9753        31.1047              0   100.00%      5.07
+        14         Fixed NLP           33.5034        31.1047              0   100.00%      5.19
+         1           restrLP           30.9127        31.1047    2.22045e-16   100.00%      5.24
+        15         Fixed NLP        Infeasible        31.1047    2.22045e-16   100.00%      5.49
+        15   Feasibility NLP           1.04975        31.1047    2.22045e-16   100.00%      5.59
+         1           restrLP           26.0812        31.1047    2.22045e-16   100.00%      5.62
+        16         Fixed NLP           36.1738        31.1047    2.22045e-16   100.00%      5.73
+         1           restrLP           26.2987        31.1047    2.22045e-16   100.00%      5.73
+        17         Fixed NLP           33.6775        31.1047    2.22045e-16   100.00%      5.87
+         1           restrLP                 0        31.1047    2.22045e-16   100.00%      5.92
+        18         Fixed NLP        Infeasible        31.1047    2.22045e-16   100.00%      6.29
+        18   Feasibility NLP          0.807932        31.1047    2.22045e-16   100.00%      6.39
+         1           restrLP           14.5206        31.1047    2.22045e-16   100.00%      6.42
+*       19         Fixed NLP           27.5797        27.5797    2.22045e-16   100.00%      6.59
+         1           restrLP           25.6337        27.5797    2.22045e-16   100.00%      6.60
+        20         Fixed NLP        Infeasible        27.5797    2.22045e-16   100.00%      6.75
+        20   Feasibility NLP          0.312948        27.5797    2.22045e-16   100.00%      6.84
+         1           restrLP           13.8614        27.5797    2.22045e-16   100.00%      6.86
+        21         Fixed NLP           32.5518        27.5797    2.22045e-16   100.00%      6.98
+         1           restrLP           15.6277        27.5797    2.22045e-16   100.00%      7.04
+        22         Fixed NLP           34.8921        27.5797    2.22045e-16   100.00%      7.16
+         1           restrLP           26.4933        27.5797    2.22045e-16   100.00%      7.17
+        23         Fixed NLP           31.3037        27.5797    2.22045e-16   100.00%      7.29
+         1           restrLP           22.8473        27.5797    2.22045e-16   100.00%      7.32
+        24         Fixed NLP           32.4074        27.5797    2.22045e-16   100.00%      7.44
+         1           restrLP           25.7502        27.5797    2.22045e-16   100.00%      7.44
+        25         Fixed NLP        Infeasible        27.5797    2.22045e-16   100.00%      7.61
+        25   Feasibility NLP          0.329308        27.5797    2.22045e-16   100.00%      7.71
+         1           restrLP           26.0843        27.5797    2.22045e-16   100.00%      7.74
+        26         Fixed NLP           32.7673        27.5797    2.22045e-16   100.00%      7.86
+         1           restrLP           7.61884        27.5797    2.22045e-16   100.00%      7.88
+        27         Fixed NLP        Infeasible        27.5797    2.22045e-16   100.00%      8.04
+        27   Feasibility NLP           1.67866        27.5797    2.22045e-16   100.00%      8.14
+         1           restrLP           20.2037        27.5797    2.22045e-16   100.00%      8.17
+*       28         Fixed NLP           26.7789        26.7789    2.22045e-16   100.00%      8.40
+         1           restrLP           21.9445        26.7789    2.22045e-16   100.00%      8.41
+        29         Fixed NLP           30.1085        26.7789    2.22045e-16   100.00%      8.53
+         1           restrLP           20.5347        26.7789    2.22045e-16   100.00%      8.55
+        30         Fixed NLP        Infeasible        26.7789    2.22045e-16   100.00%      8.94
+        30   Feasibility NLP          0.451826        26.7789    2.22045e-16   100.00%      9.06
+         1           restrLP           14.7285        26.7789    2.22045e-16   100.00%      9.10
+        31         Fixed NLP        Infeasible        26.7789    2.22045e-16   100.00%      9.25
+        31   Feasibility NLP          0.807932        26.7789    2.22045e-16   100.00%      9.35
+         1           restrLP           15.3478        26.7789    2.22045e-16   100.00%      9.38
+        32         Fixed NLP        Infeasible        26.7789    2.22045e-16   100.00%      9.70
+        32   Feasibility NLP          0.807932        26.7789    2.22045e-16   100.00%      9.79
+         1           restrLP           30.8535        26.7789    2.22045e-16   100.00%      9.82
+        33         Fixed NLP           43.0275        26.7789    2.22045e-16   100.00%      9.94
+         1           restrLP           27.4056        26.7789    2.22045e-16   100.00%      9.96
+        34         Fixed NLP           39.3722        26.7789    2.22045e-16   100.00%     10.08
+         1           restrLP           29.7136        26.7789    2.22045e-16   100.00%     10.11
+        35         Fixed NLP        Infeasible        26.7789    2.22045e-16   100.00%     10.23
+        35   Feasibility NLP           1.99584        26.7789    2.22045e-16   100.00%     10.33
+         1           restrLP           25.8617        26.7789    2.22045e-16   100.00%     10.37
+        36         Fixed NLP           27.7644        26.7789    2.22045e-16   100.00%     10.49
+         1           restrLP           15.6225        26.7789    2.22045e-16   100.00%     10.51
+*       37         Fixed NLP           21.3617        21.3617    2.22045e-16   100.00%     10.68
+         1           restrLP           24.8029        21.3617    2.22045e-16   100.00%     10.71
+        38         Fixed NLP           26.0473        21.3617    2.22045e-16   100.00%     10.83
+         1           restrLP           24.3359        21.3617    2.22045e-16   100.00%     10.84
+        39         Fixed NLP           28.6887        21.3617    2.22045e-16   100.00%     10.96
+         1           restrLP           27.6135        21.3617    2.22045e-16   100.00%     10.97
+        40         Fixed NLP            30.749        21.3617    2.22045e-16   100.00%     11.10
+         1           restrLP           29.5798        21.3617    2.22045e-16   100.00%     11.13
+        41         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     11.27
+        41   Feasibility NLP          0.200493        21.3617    2.22045e-16   100.00%     11.36
+         1           restrLP           23.2234        21.3617    2.22045e-16   100.00%     11.44
+        42         Fixed NLP           45.9043        21.3617    2.22045e-16   100.00%     11.56
+         1           restrLP           24.6722        21.3617    2.22045e-16   100.00%     11.59
+        43         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     11.93
+        43   Feasibility NLP          0.640859        21.3617    2.22045e-16   100.00%     12.04
+         1           restrLP           23.9111        21.3617    2.22045e-16   100.00%     12.10
+        44         Fixed NLP           45.9043        21.3617    2.22045e-16   100.00%     12.22
+         1           restrLP           22.3791        21.3617    2.22045e-16   100.00%     12.25
+        45         Fixed NLP            27.536        21.3617    2.22045e-16   100.00%     12.37
+         1           restrLP            27.536        21.3617    2.22045e-16   100.00%     12.37
+         1           restrLP           20.7176        21.3617    2.22045e-16   100.00%     12.38
+        46         Fixed NLP           24.8574        21.3617    2.22045e-16   100.00%     12.49
+         1           restrLP           24.9439        21.3617    2.22045e-16   100.00%     12.58
+        47         Fixed NLP            27.536        21.3617    2.22045e-16   100.00%     12.70
+         1           restrLP           26.3915        21.3617    2.22045e-16   100.00%     12.74
+        48         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     12.93
+        48   Feasibility NLP          0.451826        21.3617    2.22045e-16   100.00%     13.03
+         1           restrLP           26.8525        21.3617    2.22045e-16   100.00%     13.05
+        49         Fixed NLP           33.2414        21.3617    2.22045e-16   100.00%     13.18
+         1           restrLP           27.0283        21.3617    2.22045e-16   100.00%     13.19
+        50         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     13.54
+        50   Feasibility NLP          0.329308        21.3617    2.22045e-16   100.00%     13.64
+         1           restrLP           24.4096        21.3617    2.22045e-16   100.00%     13.66
+        51         Fixed NLP           26.7789        21.3617    2.22045e-16   100.00%     13.78
+         1           restrLP           16.5423        21.3617    2.22045e-16   100.00%     13.86
+        52         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     14.32
+        52   Feasibility NLP          0.162253        21.3617    2.22045e-16   100.00%     14.43
+         1           restrLP           19.5861        21.3617    2.22045e-16   100.00%     14.50
+        53         Fixed NLP           47.3378        21.3617    2.22045e-16   100.00%     14.62
+         1           restrLP           23.9005        21.3617    2.22045e-16   100.00%     14.69
+        54         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     14.93
+        54   Feasibility NLP          0.162253        21.3617    2.22045e-16   100.00%     15.03
+         1           restrLP           26.5634        21.3617    2.22045e-16   100.00%     15.05
+        55         Fixed NLP           33.2446        21.3617    2.22045e-16   100.00%     15.17
+         1           restrLP           25.2635        21.3617    2.22045e-16   100.00%     15.20
+        56         Fixed NLP           43.9321        21.3617    2.22045e-16   100.00%     15.32
+         1           restrLP           20.3452        21.3617    2.22045e-16   100.00%     15.38
+        57         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     15.58
+        57   Feasibility NLP          0.162253        21.3617    2.22045e-16   100.00%     15.68
+         1           restrLP           21.6351        21.3617    2.22045e-16   100.00%     15.72
+        58         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     15.95
+        58   Feasibility NLP          0.993407        21.3617    2.22045e-16   100.00%     16.05
+         1           restrLP           7.30695        21.3617    2.22045e-16   100.00%     16.08
+        59         Fixed NLP        Infeasible        21.3617    2.22045e-16   100.00%     16.42
+        59   Feasibility NLP          0.162253        21.3617    2.22045e-16   100.00%     16.52
+         1           restrLP           26.8515        21.3617    2.22045e-16   100.00%     16.56
+        60         Fixed NLP           38.5263        21.3617    2.22045e-16   100.00%     16.68
+         1           restrLP                 0        21.3617    2.22045e-16   100.00%     17.48
+*       61         Fixed NLP           19.7365        19.7365    2.22045e-16   100.00%     17.66
+         1           restrLP           19.7365        19.7365    2.22045e-16   100.00%     17.66
+        62         Fixed NLP           19.7365        19.7365    2.22045e-16   100.00%     17.78
+         1           restrLP                 0        19.7365    2.22045e-16   100.00%     17.94
+        63         Fixed NLP           22.7996        19.7365    2.22045e-16   100.00%     18.07
+         1           restrLP           13.9698        19.7365    2.22045e-16   100.00%     18.48
+        64         Fixed NLP           19.7669        19.7365    2.22045e-16   100.00%     18.60
+         1           restrLP           8.38995        19.7365    2.22045e-16   100.00%     19.29
+        65         Fixed NLP           22.9403        19.7365    2.22045e-16   100.00%     19.41
+         1           restrLP           9.27965        19.7365    2.22045e-16   100.00%     19.59
+        66         Fixed NLP             20.45        19.7365    2.22045e-16   100.00%     19.71
+         1           restrLP           19.1904        19.7365    2.22045e-16   100.00%     19.87
+        67         Fixed NLP           19.9324        19.7365    2.22045e-16   100.00%     19.99
+         1           restrLP           17.9435        19.7365    2.22045e-16   100.00%     20.01
+        68         Fixed NLP        Infeasible        19.7365    2.22045e-16   100.00%     20.18
+        68   Feasibility NLP           2.60942        19.7365    2.22045e-16   100.00%     20.28
+         1           restrLP           17.1792        19.7365    2.22045e-16   100.00%     20.38
+        69         Fixed NLP           24.1107        19.7365    2.22045e-16   100.00%     20.50
+         1           restrLP           18.2764        19.7365    2.22045e-16   100.00%     20.62
+        70         Fixed NLP             20.45        19.7365    2.22045e-16   100.00%     20.75
+         1           restrLP            19.614        19.7365    2.22045e-16   100.00%     20.77
+        71         Fixed NLP           31.6029        19.7365    2.22045e-16   100.00%     20.89
+         1           restrLP           19.4582        19.7365    2.22045e-16   100.00%     20.93
+        72         Fixed NLP            24.583        19.7365    2.22045e-16   100.00%     21.06
+         1           restrLP           18.8614        19.7365    2.22045e-16   100.00%     21.07
+        73         Fixed NLP             20.45        19.7365    2.22045e-16   100.00%     21.19
+         1           restrLP           18.0204        19.7365    2.22045e-16   100.00%     21.21
+        74         Fixed NLP           28.2173        19.7365    2.22045e-16   100.00%     21.33
+         1           restrLP           15.0899        19.7365    2.22045e-16   100.00%     21.40
+        75         Fixed NLP           26.8188        19.7365    2.22045e-16   100.00%     21.52
+         1           restrLP           15.5491        19.7365    2.22045e-16   100.00%     21.54
+        76         Fixed NLP           27.8244        19.7365    2.22045e-16   100.00%     21.67
+         1           restrLP           14.0772        19.7365    2.22045e-16   100.00%     21.72
+        77         Fixed NLP        Infeasible        19.7365    2.22045e-16   100.00%     21.87
+        77   Feasibility NLP          0.162253        19.7365    2.22045e-16   100.00%     21.98
+         1           restrLP           16.0515        19.7365    2.22045e-16   100.00%     22.47
+        78         Fixed NLP           33.1587        19.7365    2.22045e-16   100.00%     22.59
+         1           restrLP           18.4289        19.7365    2.22045e-16   100.00%     22.63
+        79         Fixed NLP           28.5758        19.7365    2.22045e-16   100.00%     22.76
+         1           restrLP           19.5411        19.7365    2.22045e-16   100.00%     22.84
+        80         Fixed NLP           21.1423        19.7365    2.22045e-16   100.00%     22.97
+         1           restrLP           16.5096        19.7365    2.22045e-16   100.00%     23.57
+        81         Fixed NLP           36.0318        19.7365    2.22045e-16   100.00%     23.70
+         1           restrLP           14.5206        19.7365    2.22045e-16   100.00%     23.77
+        82         Fixed NLP           27.3694        19.7365    2.22045e-16   100.00%     23.90
+         1           restrLP           17.4674        19.7365    2.22045e-16   100.00%     24.05
+        83         Fixed NLP             20.45        19.7365    2.22045e-16   100.00%     24.18
+         1           restrLP           19.5913        19.7365    2.22045e-16   100.00%     24.22
+        84         Fixed NLP           19.7421        19.7365    2.22045e-16   100.00%     24.34
+         1           restrLP           18.9512        19.7365    2.22045e-16   100.00%     24.56
+        85         Fixed NLP           26.4772        19.7365    2.22045e-16   100.00%     24.67
+         1           restrLP           19.5775        19.7365    2.22045e-16   100.00%     24.95
+        86         Fixed NLP           30.3983        19.7365    2.22045e-16   100.00%     25.07
+         1           restrLP           3.97411        19.7365    2.22045e-16   100.00%     25.21
+        87         Fixed NLP        Infeasible        19.7365    2.22045e-16   100.00%     25.43
+        87   Feasibility NLP          0.329308        19.7365    2.22045e-16   100.00%     25.54
+         1           restrLP           12.0319        19.7365    2.22045e-16   100.00%     25.62
+        88         Fixed NLP           31.2387        19.7365    2.22045e-16   100.00%     25.74
+         1           restrLP            15.428        19.7365    2.22045e-16   100.00%     25.76
+        89         Fixed NLP           22.7527        19.7365    2.22045e-16   100.00%     25.88
+         1           restrLP           13.0227        19.7365    2.22045e-16   100.00%     25.90
+        90         Fixed NLP           24.6208        19.7365    2.22045e-16   100.00%     26.02
+         1           restrLP           12.9334        19.7365    2.22045e-16   100.00%     26.13
+        91         Fixed NLP           31.4793        19.7365    2.22045e-16   100.00%     26.25
+         1           restrLP           18.7007        19.7365    2.22045e-16   100.00%     26.45
+        92         Fixed NLP           24.0301        19.7365    2.22045e-16   100.00%     26.56
+         1           restrLP           19.7036        19.7365    2.22045e-16   100.00%     27.17
+        93         Fixed NLP           36.6872        19.7365    2.22045e-16   100.00%     27.29
+         1           restrLP           19.7365        19.7365    2.22045e-16   100.00%     27.47
+        94         Fixed NLP           19.7365        19.7365    2.22045e-16   100.00%     27.59
+         1           restrLP           19.6795        19.7365    2.22045e-16   100.00%     27.62
+        95         Fixed NLP           20.6121        19.7365    2.22045e-16   100.00%     27.74
+         1           restrLP            14.749        19.7365    2.22045e-16   100.00%     28.10
+        96         Fixed NLP           28.0544        19.7365    2.22045e-16   100.00%     28.22
+         1           restrLP           19.7365        19.7365    2.22045e-16   100.00%     28.48
+        97         Fixed NLP           19.7365        19.7365    2.22045e-16   100.00%     28.60
+         1           restrLP           19.5168        19.7365    2.22045e-16   100.00%     29.14
+        98         Fixed NLP           19.7524        19.7365    2.22045e-16   100.00%     29.26
+         1           restrLP           19.7365        19.7365    2.22045e-16   100.00%     29.52
+        99         Fixed NLP           19.7365        19.7365    2.22045e-16   100.00%     29.64
+         1           restrLP           19.7353        19.7365    2.22045e-16   100.00%     29.68
+       100         Fixed NLP           20.6121        19.7365    2.22045e-16   100.00%     29.80
+         1           restrLP            19.702        19.7365    2.22045e-16   100.00%     30.60
+       101         Fixed NLP             20.45        19.7365    2.22045e-16   100.00%     30.72
+         1           restrLP           18.8268        19.7365    2.22045e-16   100.00%     30.76
+       102         Fixed NLP           41.0371        19.7365    2.22045e-16   100.00%     30.88
+         1           restrLP           17.6505        19.7365    2.22045e-16   100.00%     32.27
+       103         Fixed NLP           26.7789        19.7365    2.22045e-16   100.00%     32.40
+         1           restrLP           16.8582        19.7365    2.22045e-16   100.00%     32.51
+       104         Fixed NLP           35.3055        19.7365    2.22045e-16   100.00%     32.62
+         1           restrLP           18.8908        19.7365    2.22045e-16   100.00%     33.07
+       105         Fixed NLP           25.8015        19.7365    2.22045e-16   100.00%     33.19
+         1           restrLP           17.8149        19.7365    2.22045e-16   100.00%     33.25
+       106         Fixed NLP           25.7459        19.7365    2.22045e-16   100.00%     33.39
+         1           restrLP           19.4629        19.7365    2.22045e-16   100.00%     35.73
+       107         Fixed NLP           25.3409        19.7365    2.22045e-16   100.00%     35.85
+         1           restrLP            19.119        19.7365    2.22045e-16   100.00%     36.12
+       108         Fixed NLP           25.8015        19.7365    2.22045e-16   100.00%     36.23
+         1           restrLP           19.1925        19.7365    2.22045e-16   100.00%     36.27
+       109         Fixed NLP           37.5103        19.7365    2.22045e-16   100.00%     36.39
+         1           restrLP           19.5994        19.7365    2.22045e-16   100.00%     37.86
+       110         Fixed NLP           22.7367        19.7365    2.22045e-16   100.00%     37.98
+         1           restrLP           19.3421        19.7365    2.22045e-16   100.00%     38.21
+       111         Fixed NLP           22.2669        19.7365    2.22045e-16   100.00%     38.32
+         1           restrLP           18.8795        19.7365    2.22045e-16   100.00%     38.72
+       112         Fixed NLP           21.7611        19.7365    2.22045e-16   100.00%     38.84
+         1           restrLP            19.005        19.7365       0.816438    95.86%     39.15
+       113         Fixed NLP           24.6208        19.7365       0.816438    95.86%     39.27
+         1           restrLP           19.4807        19.7365        1.23245    93.76%     39.42
+       114         Fixed NLP           33.2599        19.7365        1.23245    93.76%     39.55
+         1           restrLP           18.7766        19.7365         2.5173    87.25%     39.92
+       115         Fixed NLP           20.9903        19.7365         2.5173    87.25%     40.03
+         1           restrLP           18.5649        19.7365        4.61964    76.59%     40.92
+       116         Fixed NLP           25.2649        19.7365        4.61964    76.59%     41.04
+         1           restrLP           16.8806        19.7365        7.20138    63.51%     42.32
+       117         Fixed NLP           23.9083        19.7365        7.20138    63.51%     42.44
+         1           restrLP           18.0712        19.7365         11.715    40.64%     44.84
+       118         Fixed NLP           37.9035        19.7365         11.715    40.64%     44.96
+MindtPy exiting on bound convergence. Relative gap : 5.977701819619623e-05 <= relative tolerance: 0.001 
+
+ ===============================================================================================
+ Primal integral          :   332.7255 
+ Dual integral            :   18540199249982835034766994467465338850525786841153736235952174412715931413249064176711204857037455360.0000 
+ Primal-dual gap integral :   18540199249982835034766994467465338850525786841153736235952174412715931413249064176711204857037455360.0000 

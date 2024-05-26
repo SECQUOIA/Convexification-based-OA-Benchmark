@@ -1,0 +1,324 @@
+Single-tree implementation is activated.
+Starting MindtPy version 1.0.0 using OA algorithm
+iteration_limit: 1
+stalling_limit: 5000
+time_limit: 900
+strategy: OA
+add_regularization: None
+call_after_main_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc67d0>
+call_before_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc6650>
+call_after_subproblem_solve: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc70d0>
+call_after_subproblem_feasible: <pyomo.contrib.gdpopt.util._DoNothing object at 0x7f30f1dc7670>
+tee: true
+logger: <Logger pyomo.contrib.mindtpy (INFO)>
+logging_level: 20
+integer_to_binary: false
+add_no_good_cuts: false
+use_tabu_list: false
+single_tree: true
+solution_pool: false
+num_solution_iteration: 5
+cycling_check: true
+feasibility_norm: L_infinity
+differentiate_mode: reverse_symbolic
+use_mcpp: false
+calculate_dual_at_solution: false
+use_fbbt: false
+use_dual_bound: true
+partition_obj_nonlinear_terms: true
+quadratic_strategy: 0
+move_objective: false
+add_cuts_at_incumbent: false
+load_solutions: true
+use_baron_convexification: true
+heuristic_nonconvex: false
+init_strategy: rNLP
+level_coef: 0.5
+solution_limit: 10
+sqp_lag_scaling_coef: fixed
+fp_cutoffdecr: 0.1
+fp_iteration_limit: 20
+fp_projcuts: true
+fp_transfercuts: true
+fp_projzerotol: 0.0001
+fp_mipgap: 0.01
+fp_discrete_only: true
+fp_main_norm: L1
+fp_norm_constraint: true
+fp_norm_constraint_coef: 1.0
+add_slack: false
+max_slack: 1000.0
+OA_penalty_factor: 1000.0
+equality_relaxation: false
+linearize_inactive: false
+nlp_solver: gams
+nlp_solver_args:
+  solver: ipopth
+mip_solver: gurobi_persistent
+mip_solver_args:
+mip_solver_mipgap: 0.0001
+threads: 1
+regularization_mip_threads: 0
+solver_tee: false
+mip_solver_tee: false
+nlp_solver_tee: false
+mip_regularization_solver: None
+warm_start_fixed_nlp: true
+absolute_bound_tolerance: 0.0001
+relative_bound_tolerance: 0.001
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+zero_tolerance: 1e-08
+obj_bound: 1000000000000000.0
+continuous_var_bound: 10000000000.0
+integer_var_bound: 1000000000.0
+initial_bound_coef: 0.1
+
+-----------------------------------------------------------------------------------------------
+               Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo (MindtPy)                
+-----------------------------------------------------------------------------------------------
+For more information, please visit 
+https://pyomo.readthedocs.io/en/stable/contributed_packages/mindtpy.html
+If you use this software, please cite the following:
+Bernal, David E., et al. Mixed-integer nonlinear decomposition toolbox for Pyomo (MindtPy).
+Computer Aided Chemical Engineering. Vol. 44. Elsevier, 2018. 895-900.
+
+Original model has 1 constraints (1 nonlinear) and 0 disjunctions, with 20 variables, of which 0 are binary, 10 are integer, and 10 are continuous.
+rNLP is the initial strategy being used.
+
+ ===============================================================================================
+ Iteration | Subproblem Type | Objective Value | Primal Bound |   Dual Bound |   Gap   | Time(s)
+
+lp file generation time 0.09795928001403809
+time to add the cuts to pyomo model 0.018646955490112305
+Use the baron to tighten the bounds of variables and add initial cuts
+relaxed NLP is not solved to optimality.
+         -       Relaxed NLP           80.8158            inf           -inf      inf%      0.41
+         1           restrLP           81.6601            inf        -1e+100      nan%      0.43
+*        1         Fixed NLP           80.9493        80.9493        -1e+100   12353412026887366589058123008893737673826825355365425019008863506564250582734884803048932114163564544.00%      0.52
+         1           restrLP           81.6601        80.9493        -1e+100   12353412026887366589058123008893737673826825355365425019008863506564250582734884803048932114163564544.00%      0.52
+         1           restrLP             208.2        80.9493        -1e+100   12353412026887366589058123008893737673826825355365425019008863506564250582734884803048932114163564544.00%      0.52
+         2         Fixed NLP           120.973        80.9493        -1e+100   12353412026887366589058123008893737673826825355365425019008863506564250582734884803048932114163564544.00%      0.60
+         1           restrLP             208.2        80.9493        -1e+100   12353412026887366589058123008893737673826825355365425019008863506564250582734884803048932114163564544.00%      0.60
+         1           restrLP           118.618        80.9493        10.8909    86.55%      0.60
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      0.61
+         1           restrLP           80.9493        80.9493        80.8158     0.16%      0.61
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      0.61
+         3         Fixed NLP           81.3116        80.9493        80.8158     0.16%      0.69
+         1           restrLP           80.8995        80.9493        80.8158     0.16%      0.69
+         4         Fixed NLP           81.5082        80.9493        80.8158     0.16%      0.77
+         1           restrLP           80.9327        80.9493        80.8158     0.16%      0.78
+         5         Fixed NLP           80.9859        80.9493        80.8158     0.16%      0.88
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      0.89
+         6         Fixed NLP           81.0766        80.9493        80.8158     0.16%      0.97
+         1           restrLP           80.8438        80.9493        80.8158     0.16%      1.00
+         7         Fixed NLP           81.3594        80.9493        80.8158     0.16%      1.08
+         1           restrLP           80.9351        80.9493        80.8158     0.16%      1.08
+         8         Fixed NLP           82.0227        80.9493        80.8158     0.16%      1.17
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      1.17
+         9         Fixed NLP           82.4504        80.9493        80.8158     0.16%      1.26
+         1           restrLP           80.9018        80.9493        80.8158     0.16%      1.26
+        10         Fixed NLP           82.0691        80.9493        80.8158     0.16%      1.35
+         1           restrLP           80.8761        80.9493        80.8158     0.16%      1.36
+        11         Fixed NLP           81.2181        80.9493        80.8158     0.16%      1.44
+         1           restrLP           80.8342        80.9493        80.8158     0.16%      1.44
+        12         Fixed NLP           81.2824        80.9493        80.8158     0.16%      1.52
+         1           restrLP           80.9001        80.9493        80.8158     0.16%      1.53
+        13         Fixed NLP           82.3145        80.9493        80.8158     0.16%      1.61
+         1           restrLP           80.8367        80.9493        80.8158     0.16%      1.61
+        14         Fixed NLP           81.5201        80.9493        80.8158     0.16%      1.70
+         1           restrLP           80.9376        80.9493        80.8158     0.16%      1.70
+        15         Fixed NLP           84.5092        80.9493        80.8158     0.16%      1.78
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      1.78
+        16         Fixed NLP           82.1458        80.9493        80.8158     0.16%      1.87
+         1           restrLP           80.8219        80.9493        80.8158     0.16%      1.87
+        17         Fixed NLP           81.8646        80.9493        80.8158     0.16%      1.95
+         1           restrLP           80.8226        80.9493        80.8158     0.16%      1.95
+        18         Fixed NLP           81.8934        80.9493        80.8158     0.16%      2.07
+         1           restrLP           80.8999        80.9493        80.8158     0.16%      2.07
+        19         Fixed NLP           81.4441        80.9493        80.8158     0.16%      2.15
+         1           restrLP           80.9448        80.9493        80.8158     0.16%      2.15
+        20         Fixed NLP           81.9436        80.9493        80.8158     0.16%      2.26
+         1           restrLP           80.9285        80.9493        80.8158     0.16%      2.26
+        21         Fixed NLP           82.0759        80.9493        80.8158     0.16%      2.36
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      2.37
+        22         Fixed NLP           81.3298        80.9493        80.8158     0.16%      2.45
+         1           restrLP           80.9052        80.9493        80.8158     0.16%      2.45
+        23         Fixed NLP           81.7214        80.9493        80.8158     0.16%      2.53
+         1           restrLP           80.8351        80.9493        80.8158     0.16%      2.54
+        24         Fixed NLP           81.8504        80.9493        80.8158     0.16%      2.62
+         1           restrLP           80.9482        80.9493        80.8158     0.16%      2.63
+        25         Fixed NLP            83.298        80.9493        80.8158     0.16%      2.71
+         1           restrLP            80.909        80.9493        80.8158     0.16%      2.71
+        26         Fixed NLP           81.7782        80.9493        80.8158     0.16%      2.81
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      2.82
+        27         Fixed NLP            81.528        80.9493        80.8158     0.16%      2.90
+         1           restrLP           80.8379        80.9493        80.8158     0.16%      2.90
+        28         Fixed NLP           81.3274        80.9493        80.8158     0.16%      3.00
+         1           restrLP           80.8861        80.9493        80.8158     0.16%      3.00
+        29         Fixed NLP           82.3015        80.9493        80.8158     0.16%      3.13
+         1           restrLP            80.913        80.9493        80.8158     0.16%      3.13
+        30         Fixed NLP           81.4432        80.9493        80.8158     0.16%      3.21
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      3.21
+        31         Fixed NLP           81.0923        80.9493        80.8158     0.16%      3.32
+         1           restrLP           80.8797        80.9493        80.8158     0.16%      3.32
+        32         Fixed NLP           81.3861        80.9493        80.8158     0.16%      3.42
+         1           restrLP           80.8872        80.9493        80.8158     0.16%      3.42
+        33         Fixed NLP           81.6604        80.9493        80.8158     0.16%      3.51
+         1           restrLP           80.8476        80.9493        80.8158     0.16%      3.52
+        34         Fixed NLP           81.1251        80.9493        80.8158     0.16%      3.63
+         1           restrLP           80.8158        80.9493        80.8158     0.16%      3.63
+        35         Fixed NLP           81.0112        80.9493        80.8158     0.16%      3.73
+         1           restrLP           80.8804        80.9493        80.8158     0.16%      3.73
+        36         Fixed NLP           81.2343        80.9493        80.8158     0.16%      3.83
+         1           restrLP           80.8342        80.9493        80.8158     0.16%      3.83
+        37         Fixed NLP           81.1102        80.9493        80.8158     0.16%      3.93
+         1           restrLP           80.9134        80.9493        80.8158     0.16%      3.94
+        38         Fixed NLP           81.1717        80.9493        80.8158     0.16%      4.03
+         1           restrLP           80.8686        80.9493        80.8158     0.16%      4.03
+        39         Fixed NLP           80.9898        80.9493        80.8158     0.16%      4.12
+         1           restrLP           80.8995        80.9493        80.8158     0.16%      4.12
+        40         Fixed NLP            81.052        80.9493        80.8158     0.16%      4.21
+         1           restrLP           80.8627        80.9493        80.8158     0.16%      4.22
+        41         Fixed NLP           81.3383        80.9493        80.8158     0.16%      4.32
+         1           restrLP            80.883        80.9493        80.8158     0.16%      4.32
+        42         Fixed NLP           81.2111        80.9493        80.8158     0.16%      4.41
+         1           restrLP           80.8641        80.9493        80.8158     0.16%      4.42
+        43         Fixed NLP           81.7712        80.9493        80.8158     0.16%      4.51
+         1           restrLP           80.8417        80.9493        80.8158     0.16%      4.52
+        44         Fixed NLP           81.6268        80.9493        80.8158     0.16%      4.61
+         1           restrLP           80.9299        80.9493        80.8158     0.16%      4.61
+        45         Fixed NLP           81.1741        80.9493        80.8158     0.16%      4.69
+         1           restrLP           80.8291        80.9493        80.8158     0.16%      4.70
+        46         Fixed NLP           81.0697        80.9493        80.8158     0.16%      4.79
+         1           restrLP           80.8376        80.9493        80.8158     0.16%      4.79
+        47         Fixed NLP           81.0444        80.9493        80.8158     0.16%      4.88
+         1           restrLP           80.9128        80.9493        80.8158     0.16%      4.88
+        48         Fixed NLP           81.0674        80.9493        80.8158     0.16%      4.98
+         1           restrLP           80.9036        80.9493        80.8158     0.16%      4.98
+        49         Fixed NLP           81.0641        80.9493        80.8158     0.16%      5.07
+         1           restrLP           80.9083        80.9493        80.8158     0.16%      5.07
+        50         Fixed NLP           81.3447        80.9493        80.8158     0.16%      5.16
+         1           restrLP           80.9422        80.9493        80.8158     0.16%      5.16
+        51         Fixed NLP           81.0352        80.9493        80.8158     0.16%      5.25
+         1           restrLP           80.9223        80.9493        80.8158     0.16%      5.26
+        52         Fixed NLP           81.4154        80.9493        80.8158     0.16%      5.33
+         1           restrLP           80.9332        80.9493        80.8158     0.16%      5.33
+        53         Fixed NLP           81.5571        80.9493        80.8158     0.16%      5.41
+         1           restrLP           80.9249        80.9493        80.8158     0.16%      5.41
+        54         Fixed NLP           81.2288        80.9493        80.8158     0.16%      5.49
+         1           restrLP           80.9266        80.9493        80.8158     0.16%      5.50
+        55         Fixed NLP           81.0726        80.9493        80.8158     0.16%      5.58
+         1           restrLP           80.8211        80.9493        80.8158     0.16%      5.59
+        56         Fixed NLP           81.1252        80.9493        80.8158     0.16%      5.67
+         1           restrLP           80.8671        80.9493        80.8158     0.16%      5.68
+        57         Fixed NLP            81.165        80.9493        80.8158     0.16%      5.76
+         1           restrLP           80.8192        80.9493        80.8158     0.16%      5.76
+        58         Fixed NLP           80.9917        80.9493        80.8158     0.16%      5.84
+         1           restrLP           80.8724        80.9493        80.8158     0.16%      5.84
+        59         Fixed NLP           81.0256        80.9493        80.8158     0.16%      5.91
+         1           restrLP           80.8883        80.9493        80.8158     0.16%      5.91
+        60         Fixed NLP           81.1655        80.9493        80.8158     0.16%      5.98
+         1           restrLP           80.9407        80.9493        80.8158     0.16%      5.98
+        61         Fixed NLP           81.0889        80.9493        80.8158     0.16%      6.06
+         1           restrLP           80.9316        80.9493        80.8158     0.16%      6.06
+        62         Fixed NLP           81.5244        80.9493        80.8158     0.16%      6.16
+         1           restrLP           80.9488        80.9493        80.8158     0.16%      6.17
+        63         Fixed NLP           81.4467        80.9493        80.8158     0.16%      6.25
+         1           restrLP           80.8261        80.9493        80.8158     0.16%      6.26
+        64         Fixed NLP            81.358        80.9493        80.8158     0.16%      6.33
+         1           restrLP           80.9226        80.9493        80.8158     0.16%      6.34
+        65         Fixed NLP           81.2239        80.9493        80.8158     0.16%      6.41
+         1           restrLP           80.9264        80.9493        80.8158     0.16%      6.41
+        66         Fixed NLP           81.3613        80.9493        80.8158     0.16%      6.50
+         1           restrLP           80.9307        80.9493        80.8158     0.16%      6.50
+        67         Fixed NLP           81.6363        80.9493        80.8158     0.16%      6.57
+         1           restrLP            80.946        80.9493        80.8158     0.16%      6.58
+        68         Fixed NLP           81.0738        80.9493        80.8158     0.16%      6.66
+         1           restrLP           80.9488        80.9493        80.8158     0.16%      6.68
+        69         Fixed NLP            81.632        80.9493        80.8158     0.16%      6.76
+         1           restrLP            80.847        80.9493        80.8158     0.16%      6.76
+        70         Fixed NLP           81.1079        80.9493        80.8158     0.16%      6.84
+         1           restrLP           80.9194        80.9493        80.8158     0.16%      6.84
+        71         Fixed NLP           80.9652        80.9493        80.8158     0.16%      6.92
+         1           restrLP           80.8756        80.9493        80.8158     0.16%      6.93
+        72         Fixed NLP           81.2319        80.9493        80.8158     0.16%      7.01
+         1           restrLP           80.8865        80.9493        80.8158     0.16%      7.01
+        73         Fixed NLP           81.0523        80.9493        80.8158     0.16%      7.09
+         1           restrLP           80.8523        80.9493        80.8158     0.16%      7.09
+        74         Fixed NLP           81.1575        80.9493        80.8158     0.16%      7.17
+         1           restrLP           80.9356        80.9493        80.8158     0.16%      7.17
+        75         Fixed NLP           81.0314        80.9493        80.8158     0.16%      7.24
+         1           restrLP           80.8874        80.9493        80.8158     0.16%      7.24
+        76         Fixed NLP            81.021        80.9493        80.8158     0.16%      7.33
+         1           restrLP           80.9397        80.9493        80.8158     0.16%      7.33
+        77         Fixed NLP           81.2101        80.9493        80.8158     0.16%      7.41
+         1           restrLP           80.9031        80.9493        80.8158     0.16%      7.42
+        78         Fixed NLP            81.335        80.9493        80.8158     0.16%      7.51
+         1           restrLP           80.9175        80.9493        80.8158     0.16%      7.51
+        79         Fixed NLP           81.0287        80.9493        80.8158     0.16%      7.60
+         1           restrLP           80.9062        80.9493        80.8158     0.16%      7.61
+        80         Fixed NLP           81.2365        80.9493        80.8158     0.16%      7.68
+         1           restrLP           80.8729        80.9493        80.8158     0.16%      7.69
+        81         Fixed NLP           80.9821        80.9493        80.8158     0.16%      7.77
+         1           restrLP           80.9095        80.9493        80.8158     0.16%      7.77
+        82         Fixed NLP           81.0867        80.9493        80.8158     0.16%      7.86
+         1           restrLP           80.9255        80.9493        80.8158     0.16%      7.87
+        83         Fixed NLP           81.3557        80.9493        80.8158     0.16%      7.95
+         1           restrLP           80.8858        80.9493        80.8158     0.16%      7.96
+        84         Fixed NLP           81.0178        80.9493        80.8158     0.16%      8.03
+         1           restrLP           80.9116        80.9493        80.8158     0.16%      8.04
+        85         Fixed NLP            81.082        80.9493        80.8158     0.16%      8.11
+         1           restrLP           80.9471        80.9493        80.8158     0.16%      8.12
+        86         Fixed NLP           81.0177        80.9493        80.8158     0.16%      8.20
+         1           restrLP            80.911        80.9493        80.8158     0.16%      8.20
+        87         Fixed NLP           81.2347        80.9493        80.8158     0.16%      8.30
+         1           restrLP           80.9262        80.9493        80.8158     0.16%      8.30
+        88         Fixed NLP           81.1804        80.9493        80.8158     0.16%      8.39
+         1           restrLP            80.885        80.9493        80.8158     0.16%      8.40
+        89         Fixed NLP            80.989        80.9493        80.8158     0.16%      8.49
+         1           restrLP           80.9426        80.9493        80.8158     0.16%      8.49
+        90         Fixed NLP           81.3058        80.9493        80.8158     0.16%      8.58
+         1           restrLP           80.9464        80.9493        80.8158     0.16%      8.58
+        91         Fixed NLP           81.3854        80.9493        80.8158     0.16%      8.67
+         1           restrLP           80.9475        80.9493        80.8158     0.16%      8.67
+        92         Fixed NLP           81.0521        80.9493        80.8158     0.16%      8.75
+         1           restrLP           80.9442        80.9493        80.8158     0.16%      8.75
+        93         Fixed NLP           81.1298        80.9493        80.8158     0.16%      8.83
+         1           restrLP           80.9436        80.9493        80.8158     0.16%      8.84
+        94         Fixed NLP           81.1365        80.9493        80.8158     0.16%      8.93
+         1           restrLP           80.9104        80.9493        80.8158     0.16%      8.94
+        95         Fixed NLP           81.1023        80.9493        80.8158     0.16%      9.03
+         1           restrLP           80.9374        80.9493        80.8158     0.16%      9.04
+        96         Fixed NLP           81.1073        80.9493        80.8158     0.16%      9.13
+         1           restrLP           80.9463        80.9493        80.8158     0.16%      9.13
+        97         Fixed NLP           81.1276        80.9493        80.8158     0.16%      9.23
+         1           restrLP           80.9174        80.9493        80.8274     0.15%      9.23
+        98         Fixed NLP           80.9569        80.9493        80.8274     0.15%      9.32
+         1           restrLP           80.9327        80.9493        80.8315     0.15%      9.33
+        99         Fixed NLP           81.2011        80.9493        80.8315     0.15%      9.42
+         1           restrLP           80.9458        80.9493        80.8317     0.15%      9.42
+       100         Fixed NLP           81.1719        80.9493        80.8317     0.15%      9.51
+         1           restrLP           80.9436        80.9493        80.8317     0.15%      9.51
+       101         Fixed NLP           81.1166        80.9493        80.8317     0.15%      9.61
+         1           restrLP           80.9373        80.9493        80.8317     0.15%      9.61
+       102         Fixed NLP           81.1006        80.9493        80.8317     0.15%      9.71
+         1           restrLP           80.9459        80.9493        80.8448     0.13%      9.72
+       103         Fixed NLP           81.1712        80.9493        80.8448     0.13%      9.81
+         1           restrLP           80.9235        80.9493        80.8466     0.13%      9.81
+       104         Fixed NLP           81.0266        80.9493        80.8466     0.13%      9.89
+         1           restrLP           80.9414        80.9493        80.8466     0.13%      9.89
+       105         Fixed NLP           81.1205        80.9493        80.8466     0.13%      9.97
+         1           restrLP           80.9349        80.9493        80.8733     0.09%      9.97
+MindtPy exiting on bound convergence. Relative gap : 0.000938750214880339 <= relative tolerance: 0.001 
+
+WARNING: Loading a SolverResults object with an 'aborted' status, but
+containing a solution
+MindtPy exiting on bound convergence. Relative gap : 0.000938750214880339 <= relative tolerance: 0.001 
+
+ ===============================================================================================
+ Primal integral          :    0.0000 
+ Dual integral            :   5998864470166154551392224579267245706540191384620759828243239324185624762965344078281175219728023552.0000 
+ Primal-dual gap integral :   5998864470166154551392224579267245706540191384620759828243239324185624762965344078281175219728023552.0000 
