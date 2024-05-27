@@ -12,8 +12,8 @@ The software [Paver 2](https://github.com/coin-or/Paver) is used to process the 
 
 All the MINLP instances benchmarked here are from [MINLPLib](http://minlplib.org), including
 
-1. 435 [convex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/minlp_instances/convex_instances.txt)
-2. 182 [nonconvex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/minlp_instances/nonconvex_instances.txt)
+1. 434 [convex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/minlp_instances/convex_instances.txt)
+2. 181 [nonconvex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/minlp_instances/nonconvex_instances.txt)
 
 ## Project Structure
 
