@@ -16,8 +16,8 @@ The implementation of the Outer-Approximation method is based on [MindtPy](https
 
 All the MINLP instances benchmarked here are from [MINLPLib](http://minlplib.org), including
 
-1. 435 [convex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/minlp_instances/convex_instances.txt)
-2. 182 [nonconvex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/minlp_instances/nonconvex_instances.txt)
+1. 435 [convex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/blob/main/minlp_instances/convex_instances.txt)
+2. 182 [nonconvex MINLP instances](https://github.com/SECQUOIA/Convexification-based-OA-Benchmark/blob/main/minlp_instances/nonconvex_instances.txt)
 
 ## Paver Reports
 
