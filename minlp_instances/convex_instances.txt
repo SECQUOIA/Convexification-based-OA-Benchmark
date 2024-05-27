@@ -158,7 +158,6 @@ portfol_card
 portfol_classical050_1
 portfol_roundlot
 procurement2mot
-__pycach
 ravempb
 risk2bpb
 rsyn0805hfsg

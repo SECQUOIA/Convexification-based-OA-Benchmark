@@ -100,7 +100,6 @@ pooling_epa2
 portfol_robust050_34
 portfol_shortfall050_68
 procsel
-__pycach
 ringpack_10_1
 ringpack_10_2
 sepasequ_complex
