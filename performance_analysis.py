@@ -252,7 +252,7 @@ for method_list, baseline_method in zip(
     )
     method_result['improvement'] = method_result[
         'normalized_shifted_geometric_mean'
-    ].apply(lambda x: f"{(1-x):.2%}")
+    ].apply(lambda x: f"{(x-1):.2%}")
     method_result = method_result.iloc[::-1].reset_index(drop=True)
 
     print(method_result[['method', 'improvement']], '\n')
