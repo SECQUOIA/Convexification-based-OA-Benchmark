@@ -91,38 +91,38 @@ file_paths = glob.glob('trace_file/*/*/*/*.trc')
 
 
 OA_method_list = [
-    "C-OA-Baron(c)",
-    "C-OA-Baron(r)",
-    "C-OA-Coramin(r)",
-    "C-OA-FBBT-Coramin(r)",
     "OA",
     "OA-FBBT",
+    "C-OA-Coramin(r)",
+    "C-OA-FBBT-Coramin(r)",
+    "C-OA-Baron(r)",
+    "C-OA-Baron(c)",
 ]
 LPNLP_method_list = [
-    "C-LP/NLP-B&B-Baron(c)",
-    "C-LP/NLP-B&B-Baron(r)",
-    "C-LP/NLP-B&B-Coramin(r)",
-    "C-LP/NLP-B&B-FBBT-Coramin(r)",
     "LP/NLP-B&B",
     "LP/NLP-B&B-FBBT",
+    "C-LP/NLP-B&B-Coramin(r)",
+    "C-LP/NLP-B&B-FBBT-Coramin(r)",
+    "C-LP/NLP-B&B-Baron(r)",
+    "C-LP/NLP-B&B-Baron(c)",
 ]
 
 GOA_method_list = [
-    "C-GOA-Baron(c)",
-    "C-GOA-Baron(r)",
-    "C-GOA-Coramin(r)",
-    "C-GOA-FBBT-Coramin(r)",
     "GOA",
     "GOA-FBBT",
+    "C-GOA-Coramin(r)",
+    "C-GOA-FBBT-Coramin(r)",
+    "C-GOA-Baron(r)",
+    "C-GOA-Baron(c)",
 ]
 
 GLPNLP_method_list = [
-    "C-GLP/NLP-B&B-Baron(c)",
-    "C-GLP/NLP-B&B-Baron(r)",
-    "C-GLP/NLP-B&B-Coramin(r)",
-    "C-GLP/NLP-B&B-FBBT-Coramin(r)",
     "GLP/NLP-B&B",
     "GLP/NLP-B&B-FBBT",
+    "C-GLP/NLP-B&B-Coramin(r)",
+    "C-GLP/NLP-B&B-FBBT-Coramin(r)",
+    "C-GLP/NLP-B&B-Baron(r)",
+    "C-GLP/NLP-B&B-Baron(c)",
 ]
 
 # Read the trace files and extract the data
@@ -200,6 +200,7 @@ nonconvex_instance_list = list(
 print('Filter out the simple instances solved within {} seconds'.format(threshold))
 
 filtered_list = []
+method_to_group = {}
 for baseline_method, method_list, instance_list in [
     ['OA', OA_method_list, convex_instance_list],
     ['LP/NLP-B&B', LPNLP_method_list, convex_instance_list],
@@ -213,10 +214,13 @@ for baseline_method, method_list, instance_list in [
     )
     filtered_list += list(itertools.product(filtered_instance_list, method_list))
 
+    method_to_group.update({method: baseline_method for method in method_list})
+
 filtered_df = pd.DataFrame(filtered_list, columns=['InputFileName', 'SolverName'])
 df = pd.merge(df, filtered_df, on=['InputFileName', 'SolverName'], how='right')
-df[performance_index] = df[performance_index].fillna(900)
-
+df['group'] = df['SolverName'].map(method_to_group)
+df[performance_index] = df.groupby(['InputFileName','group'])[performance_index].transform(lambda x: x.fillna(x.max()))
+df = df[df['NumberOfVariables'].notna()]
 group_sizes = df.groupby('SolverName').size().reset_index(name='count')
 print('group_sizes', group_sizes)
 
@@ -238,6 +242,7 @@ result = (
     .reset_index()
 )
 result.columns = ['method', 'shifted_geometric_mean']
+final_result = pd.DataFrame(columns=['method', 'shifted_geometric_mean'])
 
 for method_list, baseline_method in zip(
     [OA_method_list, GOA_method_list, LPNLP_method_list, GLPNLP_method_list],
@@ -254,11 +259,17 @@ for method_list, baseline_method in zip(
         'normalized_shifted_geometric_mean'
     ].apply(lambda x: f"{(x-1):.2%}")
     method_result = method_result.iloc[::-1].reset_index(drop=True)
-
-    print(method_result[['method', 'improvement']], '\n')
-    method_result[['method', 'improvement']].to_csv(
-        'performance_analysis_' + performance_index + '.csv',
-        mode='a',
-        header=True,
-        index=False,
+    method_result['shifted_geometric_mean'] = method_result['shifted_geometric_mean'].apply(
+        lambda x: f"{x:.1f}"
     )
+    method_result['shifted_geometric_mean'] = method_result['shifted_geometric_mean'] + ' (' + method_result['improvement'] + ')'
+    final_result = pd.concat([final_result, method_result[['method', 'shifted_geometric_mean']]], ignore_index=True)
+custom_order = OA_method_list + GOA_method_list + LPNLP_method_list + GLPNLP_method_list
+final_result['method'] = pd.Categorical(final_result['method'], categories=custom_order, ordered=True)
+final_result = final_result.sort_values('method').reset_index(drop=True)
+final_result.to_csv(
+    'performance_analysis_' + performance_index + '.csv',
+    header=True,
+    index=False,
+)
+print(final_result)
